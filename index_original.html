@@ -12,6 +12,9 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
 </head>
 
 <body>
@@ -129,6 +132,30 @@
                     </ul>
                 </div>
             </div>
+
+            <!-- Notes Panel -->
+            <div class="section-notes-wrapper fade-up">
+                <div class="notes-toggle" id="notes-toggle-problem" onclick="toggleNotesPanel('problem')">
+                    <div class="notes-toggle-left">
+                        📝 Notes & Feedback
+                        <span class="notes-toggle-count" id="notes-count-problem">0</span>
+                    </div>
+                    <span class="notes-toggle-arrow">▼</span>
+                </div>
+                <div class="notes-panel" id="notes-panel-problem">
+                    <div class="notes-author-bar">
+                        <span class="notes-author-label">Posting as:</span>
+                        <button class="author-toggle-btn active" data-author="Hamza">👨‍💻 Hamza</button>
+                        <button class="author-toggle-btn" data-author="Superviseur">👤 Superviseur</button>
+                    </div>
+                    <div class="note-input-row">
+                        <input type="text" class="note-input" id="note-input-problem"
+                            placeholder="Add a note about the Problem section...">
+                        <button class="note-add-btn" onclick="NotesManager.add('problem')">Add Note</button>
+                    </div>
+                    <div class="notes-list" id="notes-list-problem"></div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -189,6 +216,30 @@
                     <div class="diff-icon">💰</div>
                     <h4>Subsidy-Aware</h4>
                     <p>94,000 families benefited from Daam Sakane in 2024. Thousands more still qualify</p>
+                </div>
+            </div>
+
+            <!-- Notes Panel -->
+            <div class="section-notes-wrapper fade-up">
+                <div class="notes-toggle" id="notes-toggle-positioning" onclick="toggleNotesPanel('positioning')">
+                    <div class="notes-toggle-left">
+                        📝 Notes & Feedback
+                        <span class="notes-toggle-count" id="notes-count-positioning">0</span>
+                    </div>
+                    <span class="notes-toggle-arrow">▼</span>
+                </div>
+                <div class="notes-panel" id="notes-panel-positioning">
+                    <div class="notes-author-bar">
+                        <span class="notes-author-label">Posting as:</span>
+                        <button class="author-toggle-btn active" data-author="Hamza">👨‍💻 Hamza</button>
+                        <button class="author-toggle-btn" data-author="Superviseur">👤 Superviseur</button>
+                    </div>
+                    <div class="note-input-row">
+                        <input type="text" class="note-input" id="note-input-positioning"
+                            placeholder="Add a note about the Positioning section...">
+                        <button class="note-add-btn" onclick="NotesManager.add('positioning')">Add Note</button>
+                    </div>
+                    <div class="notes-list" id="notes-list-positioning"></div>
                 </div>
             </div>
         </div>
@@ -409,6 +460,30 @@
             <p class="matrix-takeaway fade-up delay-2">"They are <strong>databases</strong>. STAYGENIE is an
                 <strong>advisor</strong>. That's the fundamental difference."
             </p>
+
+            <!-- Notes Panel -->
+            <div class="section-notes-wrapper fade-up">
+                <div class="notes-toggle" id="notes-toggle-competitors" onclick="toggleNotesPanel('competitors')">
+                    <div class="notes-toggle-left">
+                        📝 Notes & Feedback
+                        <span class="notes-toggle-count" id="notes-count-competitors">0</span>
+                    </div>
+                    <span class="notes-toggle-arrow">▼</span>
+                </div>
+                <div class="notes-panel" id="notes-panel-competitors">
+                    <div class="notes-author-bar">
+                        <span class="notes-author-label">Posting as:</span>
+                        <button class="author-toggle-btn active" data-author="Hamza">👨‍💻 Hamza</button>
+                        <button class="author-toggle-btn" data-author="Superviseur">👤 Superviseur</button>
+                    </div>
+                    <div class="note-input-row">
+                        <input type="text" class="note-input" id="note-input-competitors"
+                            placeholder="Add a note about the Competitors section...">
+                        <button class="note-add-btn" onclick="NotesManager.add('competitors')">Add Note</button>
+                    </div>
+                    <div class="notes-list" id="notes-list-competitors"></div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -1087,6 +1162,30 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Notes Panel -->
+            <div class="section-notes-wrapper fade-up">
+                <div class="notes-toggle" id="notes-toggle-personas" onclick="toggleNotesPanel('personas')">
+                    <div class="notes-toggle-left">
+                        📝 Notes & Feedback
+                        <span class="notes-toggle-count" id="notes-count-personas">0</span>
+                    </div>
+                    <span class="notes-toggle-arrow">▼</span>
+                </div>
+                <div class="notes-panel" id="notes-panel-personas">
+                    <div class="notes-author-bar">
+                        <span class="notes-author-label">Posting as:</span>
+                        <button class="author-toggle-btn active" data-author="Hamza">👨‍💻 Hamza</button>
+                        <button class="author-toggle-btn" data-author="Superviseur">👤 Superviseur</button>
+                    </div>
+                    <div class="note-input-row">
+                        <input type="text" class="note-input" id="note-input-personas"
+                            placeholder="Add a note about the Personas section...">
+                        <button class="note-add-btn" onclick="NotesManager.add('personas')">Add Note</button>
+                    </div>
+                    <div class="notes-list" id="notes-list-personas"></div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -1165,6 +1264,30 @@
                     <div class="engine-tech">NLP · Scheduling · Payment APIs</div>
                 </div>
             </div>
+
+            <!-- Notes Panel -->
+            <div class="section-notes-wrapper fade-up">
+                <div class="notes-toggle" id="notes-toggle-ai-engines" onclick="toggleNotesPanel('ai-engines')">
+                    <div class="notes-toggle-left">
+                        📝 Notes & Feedback
+                        <span class="notes-toggle-count" id="notes-count-ai-engines">0</span>
+                    </div>
+                    <span class="notes-toggle-arrow">▼</span>
+                </div>
+                <div class="notes-panel" id="notes-panel-ai-engines">
+                    <div class="notes-author-bar">
+                        <span class="notes-author-label">Posting as:</span>
+                        <button class="author-toggle-btn active" data-author="Hamza">👨‍💻 Hamza</button>
+                        <button class="author-toggle-btn" data-author="Superviseur">👤 Superviseur</button>
+                    </div>
+                    <div class="note-input-row">
+                        <input type="text" class="note-input" id="note-input-ai-engines"
+                            placeholder="Add a note about the AI Engines section...">
+                        <button class="note-add-btn" onclick="NotesManager.add('ai-engines')">Add Note</button>
+                    </div>
+                    <div class="notes-list" id="notes-list-ai-engines"></div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -1212,6 +1335,30 @@
                     <div class="impact-unit">%</div>
                     <div class="impact-label">Owner revenue increase</div>
                     <div class="impact-compare">through smart pricing & vacancy fill</div>
+                </div>
+            </div>
+
+            <!-- Notes Panel -->
+            <div class="section-notes-wrapper fade-up">
+                <div class="notes-toggle" id="notes-toggle-impact" onclick="toggleNotesPanel('impact')">
+                    <div class="notes-toggle-left">
+                        📝 Notes & Feedback
+                        <span class="notes-toggle-count" id="notes-count-impact">0</span>
+                    </div>
+                    <span class="notes-toggle-arrow">▼</span>
+                </div>
+                <div class="notes-panel" id="notes-panel-impact">
+                    <div class="notes-author-bar">
+                        <span class="notes-author-label">Posting as:</span>
+                        <button class="author-toggle-btn active" data-author="Hamza">👨‍💻 Hamza</button>
+                        <button class="author-toggle-btn" data-author="Superviseur">👤 Superviseur</button>
+                    </div>
+                    <div class="note-input-row">
+                        <input type="text" class="note-input" id="note-input-impact"
+                            placeholder="Add a note about the Impact section...">
+                        <button class="note-add-btn" onclick="NotesManager.add('impact')">Add Note</button>
+                    </div>
+                    <div class="notes-list" id="notes-list-impact"></div>
                 </div>
             </div>
         </div>
@@ -1314,6 +1461,56 @@
                     <span class="tech-tag">AWS / GCP</span>
                 </div>
             </div>
+
+            <!-- Notes Panel -->
+            <div class="section-notes-wrapper fade-up">
+                <div class="notes-toggle" id="notes-toggle-roadmap" onclick="toggleNotesPanel('roadmap')">
+                    <div class="notes-toggle-left">
+                        📝 Notes & Feedback
+                        <span class="notes-toggle-count" id="notes-count-roadmap">0</span>
+                    </div>
+                    <span class="notes-toggle-arrow">▼</span>
+                </div>
+                <div class="notes-panel" id="notes-panel-roadmap">
+                    <div class="notes-author-bar">
+                        <span class="notes-author-label">Posting as:</span>
+                        <button class="author-toggle-btn active" data-author="Hamza">👨‍💻 Hamza</button>
+                        <button class="author-toggle-btn" data-author="Superviseur">👤 Superviseur</button>
+                    </div>
+                    <div class="note-input-row">
+                        <input type="text" class="note-input" id="note-input-roadmap"
+                            placeholder="Add a note about the Roadmap section...">
+                        <button class="note-add-btn" onclick="NotesManager.add('roadmap')">Add Note</button>
+                    </div>
+                    <div class="notes-list" id="notes-list-roadmap"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURE VALIDATION BOARD -->
+    <section id="feature-board" class="section">
+        <div class="container">
+            <div class="section-header fade-up">
+                <span class="section-tag">Feature Validation</span>
+                <h2 class="section-title">Prioritize <span class="gradient-text">What to Build</span></h2>
+                <p class="section-desc">Vote on each feature: Must Have, Nice to Have, or Not Needed. Votes sync in
+                    real-time.</p>
+            </div>
+
+            <div class="notes-author-bar fade-up delay-1" style="justify-content: center; margin-bottom: 24px;">
+                <span class="notes-author-label">Voting as:</span>
+                <button class="author-toggle-btn active" data-author="Hamza">👨‍💻 Hamza</button>
+                <button class="author-toggle-btn" data-author="Superviseur">👤 Superviseur</button>
+            </div>
+
+            <div class="feature-summary fade-up delay-1" id="feature-summary">
+                <span class="fs-item" style="color:#64748b">Loading...</span>
+            </div>
+
+            <div class="fade-up delay-2" id="feature-board-list">
+                <!-- Rendered by FeatureBoard.render() -->
+            </div>
         </div>
     </section>
 
@@ -1373,6 +1570,11 @@
             </div>
         </div>
     </section>
+
+    <!-- Floating Notes Toolbar -->
+    <div class="notes-toolbar">
+        <span id="notes-global-count">📝 <strong>0</strong> notes</span>
+    </div>
 
     <footer class="site-footer">
         <p>STAYGENIE · Week 2 Strategy Presentation · Built with AI-Powered Thinking 🧠</p>
@@ -1637,6 +1839,7 @@
     </script>
 
     <script src="script.js"></script>
+    <script src="notes.js"></script>
 </body>
 
 </html>
