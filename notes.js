@@ -98,7 +98,7 @@ const Storage = {
 // ========================
 const AuthorManager = {
     get() {
-        return localStorage.getItem('sg_author') || 'Hamza';
+        return localStorage.getItem('sg_author') || 'Student';
     },
     set(name) {
         localStorage.setItem('sg_author', name);
@@ -196,8 +196,8 @@ const NotesManager = {
         container.innerHTML = noteEntries.map(([id, note]) => `
             <div class="note-card" data-status="${note.status}">
                 <div class="note-header">
-                    <span class="note-author" style="background: ${note.author === 'Hamza' ? 'rgba(99,102,241,0.2); color:#a5b4fc' : 'rgba(236,72,153,0.2); color:#f9a8d4'}">
-                        ${note.author === 'Hamza' ? '👨‍💻' : '👤'} ${note.author}
+                    <span class="note-author" style="background: ${note.author === 'Student' ? 'rgba(99,102,241,0.2); color:#a5b4fc' : 'rgba(236,72,153,0.2); color:#f9a8d4'}">
+                        ${note.author === 'Student' ? '👨‍💻' : '👤'} ${note.author}
                     </span>
                     <span class="note-time">${note.date || ''} ${note.time || ''}</span>
                 </div>
@@ -299,8 +299,8 @@ const FeatureBoard = {
 
             this.features.filter(f => f.category === cat).forEach(feature => {
                 const featureVotes = (votes && votes[feature.id]) || {};
-                const hamzaVote = featureVotes['Hamza'] || 'unset';
-                const stakeholderVote = featureVotes['Superviseur'] || 'unset';
+                const hamzaVote = featureVotes['Student'] || 'unset';
+                const stakeholderVote = featureVotes['Stakeholder'] || 'unset';
 
                 html += `
                 <div class="fb-feature">
@@ -310,13 +310,13 @@ const FeatureBoard = {
                     </div>
                     <div class="fb-votes">
                         <div class="fb-vote-col">
-                            <span class="fb-vote-label">Hamza</span>
+                            <span class="fb-vote-label">Student</span>
                             <span class="fb-vote-badge" style="background: ${this.priorityColors[hamzaVote]}22; color: ${this.priorityColors[hamzaVote]}; border-color: ${this.priorityColors[hamzaVote]}44">
                                 ${this.priorities[hamzaVote]}
                             </span>
                         </div>
                         <div class="fb-vote-col">
-                            <span class="fb-vote-label">Superviseur</span>
+                            <span class="fb-vote-label">Stakeholder</span>
                             <span class="fb-vote-badge" style="background: ${this.priorityColors[stakeholderVote]}22; color: ${this.priorityColors[stakeholderVote]}; border-color: ${this.priorityColors[stakeholderVote]}44">
                                 ${this.priorities[stakeholderVote]}
                             </span>
@@ -337,7 +337,7 @@ const FeatureBoard = {
         let mustCount = 0, niceCount = 0, notCount = 0, unsetCount = 0;
         this.features.forEach(f => {
             const v = votes && votes[f.id];
-            const combined = v ? (v['Superviseur'] || v['Hamza'] || 'unset') : 'unset';
+            const combined = v ? (v['Stakeholder'] || v['Student'] || 'unset') : 'unset';
             if (combined === 'must') mustCount++;
             else if (combined === 'nice') niceCount++;
             else if (combined === 'not') notCount++;
