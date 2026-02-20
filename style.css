@@ -1931,134 +1931,131 @@ strong {
     }
 }
 
-/* ==================== TEAM ==================== */
-.team-grid {
+/* ==================== COSTS ==================== */
+.costs-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    margin-bottom: 28px;
 }
 
-.team-card {
+.cost-category {
     background: var(--card-bg);
     border: 1px solid var(--border);
     border-radius: var(--radius);
-    padding: 28px 20px;
-    text-align: center;
-    transition: transform 0.3s;
+    padding: 24px;
 }
 
-.team-card:hover {
-    transform: translateY(-4px);
-}
-
-.team-avatar {
-    font-size: 2.5rem;
-    margin-bottom: 14px;
-}
-
-.team-name {
-    font-size: 0.95rem;
+.cost-category-title {
+    font-size: 1rem;
     font-weight: 700;
     color: var(--text);
     margin-bottom: 4px;
 }
 
-.team-role {
-    font-size: 0.72rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    color: #a78bfa;
-    margin-bottom: 12px;
+.cost-category-explain {
+    font-size: 0.7rem;
+    font-style: italic;
+    color: var(--text-muted);
+    opacity: 0.7;
+    margin-bottom: 16px;
+    line-height: 1.4;
 }
 
-.team-desc {
+.cost-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.cost-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.cost-item:last-child {
+    border-bottom: none;
+}
+
+.cost-label {
     font-size: 0.78rem;
     color: var(--text-muted);
-    line-height: 1.5;
 }
 
-@media (max-width: 768px) {
-    .team-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+.cost-value {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--text);
+    white-space: nowrap;
 }
 
-@media (max-width: 480px) {
-    .team-grid {
-        grid-template-columns: 1fr;
-    }
+.cost-subtotal {
+    border-top: 1px solid rgba(99, 102, 241, 0.2);
+    border-bottom: none;
+    margin-top: 4px;
+    padding-top: 10px;
 }
 
-/* ==================== THE ASK ==================== */
-.ask-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin-bottom: 32px;
-}
-
-.ask-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 28px 22px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.ask-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-}
-
-.ask-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, #6366f1, #10b981);
-}
-
-.ask-icon {
-    font-size: 2.2rem;
-    margin-bottom: 14px;
-}
-
-.ask-title {
-    font-size: 0.95rem;
+.cost-subtotal .cost-label {
     font-weight: 700;
     color: var(--text);
+}
+
+.cost-subtotal .cost-value {
+    color: #a78bfa;
+    font-weight: 800;
+}
+
+.cost-total {
+    background: rgba(99, 102, 241, 0.06);
+    border: 1px solid rgba(99, 102, 241, 0.15);
+    border-radius: var(--radius);
+    padding: 24px;
+    text-align: center;
+}
+
+.cost-total-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
     margin-bottom: 10px;
 }
 
-.ask-desc {
-    font-size: 0.8rem;
+.cost-total-label {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.cost-total-value {
+    font-size: 1.6rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #6366f1, #10b981);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cost-total-note {
+    font-size: 0.78rem;
     color: var(--text-muted);
     line-height: 1.5;
-}
-
-.ask-cta {
-    padding: 20px 24px;
-    background: rgba(99, 102, 241, 0.06);
-    border: 1px solid rgba(99, 102, 241, 0.15);
-    border-radius: var(--radius-sm);
-    text-align: center;
-}
-
-.ask-cta p {
-    font-size: 0.88rem;
-    color: var(--text-muted);
-    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 @media (max-width: 768px) {
-    .ask-grid {
+    .costs-grid {
         grid-template-columns: 1fr;
+    }
+
+    .cost-total-row {
+        flex-direction: column;
+        gap: 4px;
     }
 }
 
