@@ -1579,6 +1579,30 @@ strong {
     line-height: 1.5;
 }
 
+.tam-explainer {
+    font-size: 0.72rem;
+    font-style: italic;
+    color: var(--text-muted);
+    opacity: 0.7;
+    margin-bottom: 8px;
+}
+
+.tam-source {
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    opacity: 0.5;
+    margin-top: 10px;
+    padding-top: 8px;
+    border-top: 1px solid var(--border);
+}
+
+.market-stat-source {
+    font-size: 0.6rem;
+    color: var(--text-muted);
+    opacity: 0.5;
+    margin-top: 6px;
+}
+
 .market-stats-bar {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -1670,7 +1694,16 @@ strong {
     font-size: 0.95rem;
     font-weight: 700;
     color: var(--text);
-    margin-bottom: 8px;
+    margin-bottom: 4px;
+}
+
+.revenue-explainer {
+    font-size: 0.68rem;
+    font-style: italic;
+    color: var(--text-muted);
+    opacity: 0.7;
+    margin-bottom: 10px;
+    line-height: 1.4;
 }
 
 .revenue-price {
