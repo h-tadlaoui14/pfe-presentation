@@ -34,9 +34,12 @@
             <a href="#competitors" class="nav-link" data-section="competitors">Competitors</a>
             <a href="#personas" class="nav-link" data-section="personas">Personas</a>
             <a href="#ai-engines" class="nav-link" data-section="ai-engines">AI Engines</a>
+            <a href="#architecture" class="nav-link" data-section="architecture">Architecture</a>
             <a href="#impact" class="nav-link" data-section="impact">Impact</a>
             <a href="#roadmap" class="nav-link" data-section="roadmap">Roadmap</a>
             <a href="#revenue" class="nav-link" data-section="revenue">Revenue</a>
+            <a href="#gtm" class="nav-link" data-section="gtm">GTM</a>
+            <a href="#user-flow" class="nav-link" data-section="user-flow">User Flow</a>
             <a href="#swot" class="nav-link" data-section="swot">SWOT</a>
         </div>
         <div class="nav-progress">
@@ -1484,6 +1487,83 @@
         </div>
     </section>
 
+    <!-- ARCHITECTURE SECTION -->
+    <section id="architecture" class="section">
+        <div class="container">
+            <div class="section-header fade-up">
+                <span class="section-tag">Technical Design</span>
+                <h2 class="section-title">System <span class="gradient-text">Architecture</span></h2>
+                <p class="section-desc">How STAYGENIE is built — from the user interface down to the data layer. Each
+                    layer handles a specific responsibility.</p>
+            </div>
+
+            <div class="arch-stack fade-up delay-1">
+                <!-- Layer 1: Frontend -->
+                <div class="arch-layer arch-frontend">
+                    <div class="arch-layer-label">Layer 1 — Frontend</div>
+                    <h4 class="arch-layer-title">User Interface</h4>
+                    <p class="arch-layer-explain">What the user sees and interacts with — the mobile app and web app</p>
+                    <div class="arch-techs">
+                        <span class="arch-tech">React Native <small>(Mobile App)</small></span>
+                        <span class="arch-tech">React.js <small>(Web App)</small></span>
+                        <span class="arch-tech">Tailwind CSS <small>(Styling)</small></span>
+                    </div>
+                </div>
+
+                <div class="arch-arrow">▼</div>
+
+                <!-- Layer 2: Backend API -->
+                <div class="arch-layer arch-backend">
+                    <div class="arch-layer-label">Layer 2 — Backend API</div>
+                    <h4 class="arch-layer-title">Server & Business Logic</h4>
+                    <p class="arch-layer-explain">The brain that processes requests, manages users, and coordinates
+                        between frontend and AI. API = Application Programming Interface — the bridge between the app
+                        and the server.</p>
+                    <div class="arch-techs">
+                        <span class="arch-tech">Django <small>(Python Framework)</small></span>
+                        <span class="arch-tech">REST API <small>(Communication Protocol)</small></span>
+                        <span class="arch-tech">JWT Auth <small>(Secure Login Tokens)</small></span>
+                        <span class="arch-tech">Celery <small>(Background Tasks)</small></span>
+                    </div>
+                </div>
+
+                <div class="arch-arrow">▼</div>
+
+                <!-- Layer 3: AI Engine -->
+                <div class="arch-layer arch-ai">
+                    <div class="arch-layer-label">Layer 3 — AI Engine Layer</div>
+                    <h4 class="arch-layer-title">6 Specialized AI Engines</h4>
+                    <p class="arch-layer-explain">The intelligence layer — each engine handles a specific task like
+                        matching properties, checking subsidies, or analyzing contracts</p>
+                    <div class="arch-techs">
+                        <span class="arch-tech">🏠 Property Matcher</span>
+                        <span class="arch-tech">🏛️ Subsidy Checker</span>
+                        <span class="arch-tech">📄 Contract Analyzer</span>
+                        <span class="arch-tech">📊 Market Insights</span>
+                        <span class="arch-tech">🔔 Alert System</span>
+                        <span class="arch-tech">🤖 AI Advisor (NLP)</span>
+                    </div>
+                </div>
+
+                <div class="arch-arrow">▼</div>
+
+                <!-- Layer 4: Data -->
+                <div class="arch-layer arch-data">
+                    <div class="arch-layer-label">Layer 4 — Data & Storage</div>
+                    <h4 class="arch-layer-title">Databases & External Data</h4>
+                    <p class="arch-layer-explain">Where all the data lives — user profiles, property listings, subsidy
+                        records, and market data</p>
+                    <div class="arch-techs">
+                        <span class="arch-tech">PostgreSQL <small>(Main Database)</small></span>
+                        <span class="arch-tech">Redis <small>(Fast Cache)</small></span>
+                        <span class="arch-tech">Firebase <small>(Real-time & Auth)</small></span>
+                        <span class="arch-tech">External APIs <small>(Daam Sakane, ANCFCC)</small></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- IMPACT SECTION -->
     <section id="impact" class="section">
         <div class="container">
@@ -1755,6 +1835,126 @@
                     <div class="revenue-proj-item">
                         <span class="revenue-proj-label">Projected Annual Revenue</span>
                         <span class="revenue-proj-value highlight-value">3–5M MAD</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GO-TO-MARKET SECTION -->
+    <section id="gtm" class="section">
+        <div class="container">
+            <div class="section-header fade-up">
+                <span class="section-tag">Launch Strategy</span>
+                <h2 class="section-title">Go-to-Market <span class="gradient-text">Strategy</span></h2>
+                <p class="section-desc">Go-to-Market (GTM) means the plan for how we reach our first users and grow from
+                    there. Here's our 3-phase approach.</p>
+            </div>
+
+            <div class="gtm-timeline fade-up delay-1">
+                <div class="gtm-phase">
+                    <div class="gtm-phase-badge">Phase 1</div>
+                    <h4 class="gtm-phase-title">🎯 Casablanca Pilot</h4>
+                    <div class="gtm-phase-time">Q1–Q2 2026</div>
+                    <ul class="gtm-list">
+                        <li>Launch with <strong>500 beta users</strong> in Casablanca</li>
+                        <li>Partner with 10 local agencies for initial listings</li>
+                        <li>Focus on renters aged 25–35 (highest demand segment)</li>
+                        <li>Free tier only — validate product-market fit</li>
+                        <li>Collect feedback via in-app surveys and Feature Board</li>
+                    </ul>
+                    <div class="gtm-channels">
+                        <span class="gtm-channel">Instagram Ads</span>
+                        <span class="gtm-channel">University Partnerships</span>
+                        <span class="gtm-channel">Real Estate Expos</span>
+                    </div>
+                </div>
+
+                <div class="gtm-phase">
+                    <div class="gtm-phase-badge">Phase 2</div>
+                    <h4 class="gtm-phase-title">📈 Expand to 3 Cities</h4>
+                    <div class="gtm-phase-time">Q3–Q4 2026</div>
+                    <ul class="gtm-list">
+                        <li>Expand to <strong>Rabat and Marrakech</strong></li>
+                        <li>Launch Premium subscription (99–299 MAD/month)</li>
+                        <li>Activate subsidy eligibility checker for Daam Sakane</li>
+                        <li>Onboard 50+ agencies on the SaaS plan</li>
+                        <li>Target: 5,000 MAU (Monthly Active Users)</li>
+                    </ul>
+                    <div class="gtm-channels">
+                        <span class="gtm-channel">Facebook Groups</span>
+                        <span class="gtm-channel">Agency Referral Program</span>
+                        <span class="gtm-channel">Content Marketing</span>
+                    </div>
+                </div>
+
+                <div class="gtm-phase">
+                    <div class="gtm-phase-badge">Phase 3</div>
+                    <h4 class="gtm-phase-title">🌍 Scale Nationally + MENA</h4>
+                    <div class="gtm-phase-time">2027+</div>
+                    <ul class="gtm-list">
+                        <li>Nationwide coverage across Morocco</li>
+                        <li>B2B partnerships (B2B = Business-to-Business — selling tools to agencies)</li>
+                        <li>Explore expansion to Tunisia and Egypt</li>
+                        <li>AI models trained on 100K+ data points</li>
+                        <li>Target: 50,000 MAU, 1,000+ transactions/month</li>
+                    </ul>
+                    <div class="gtm-channels">
+                        <span class="gtm-channel">PR & Media Coverage</span>
+                        <span class="gtm-channel">API Partnerships</span>
+                        <span class="gtm-channel">Government Programs</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- USER FLOW SECTION -->
+    <section id="user-flow" class="section">
+        <div class="container">
+            <div class="section-header fade-up">
+                <span class="section-tag">How It Works</span>
+                <h2 class="section-title">User <span class="gradient-text">Journey</span></h2>
+                <p class="section-desc">A step-by-step walkthrough of how a typical renter uses STAYGENIE — from sign-up
+                    to moving in.</p>
+            </div>
+
+            <div class="flow-steps fade-up delay-1">
+                <div class="flow-step">
+                    <div class="flow-step-number">1</div>
+                    <div class="flow-step-content">
+                        <h4 class="flow-step-title">📱 Sign Up & Set Preferences</h4>
+                        <p class="flow-step-desc">User creates an account and tells Genie what they're looking for:
+                            budget, city, number of rooms, proximity to work or school.</p>
+                    </div>
+                </div>
+                <div class="flow-connector"></div>
+                <div class="flow-step">
+                    <div class="flow-step-number">2</div>
+                    <div class="flow-step-content">
+                        <h4 class="flow-step-title">🤖 AI Matches & Alerts</h4>
+                        <p class="flow-step-desc">Genie's Property Matcher AI searches listings and sends personalized
+                            alerts. The Subsidy Engine also checks if the user qualifies for Daam Sakane or Damane
+                            Assakane aid.</p>
+                    </div>
+                </div>
+                <div class="flow-connector"></div>
+                <div class="flow-step">
+                    <div class="flow-step-number">3</div>
+                    <div class="flow-step-content">
+                        <h4 class="flow-step-title">📄 Smart Contract Review</h4>
+                        <p class="flow-step-desc">Before signing, the Contract Analyzer AI scans the rental agreement
+                            for red flags — unfair clauses, missing terms, or legal issues — and explains them in plain
+                            language.</p>
+                    </div>
+                </div>
+                <div class="flow-connector"></div>
+                <div class="flow-step">
+                    <div class="flow-step-number">4</div>
+                    <div class="flow-step-content">
+                        <h4 class="flow-step-title">🏠 Move In with Confidence</h4>
+                        <p class="flow-step-desc">User signs a verified contract, receives a move-in checklist, and gets
+                            ongoing alerts about neighborhood updates, subsidy deadlines, and market changes.</p>
                     </div>
                 </div>
             </div>
@@ -2124,7 +2324,9 @@
                 'revenue': '💰 Four revenue streams designed to <strong>scale</strong>. From freemium to SaaS — we make money at every layer of the ecosystem.',
                 'why-now': '⏰ The timing is <strong>perfect</strong> — government subsidies, a digital gap, a rental crisis, and the World Cup 2030 all converging!',
                 'swot': '🔍 Strengths, Weaknesses, Opportunities, Threats — here\'s an honest look at where we stand and what we\'re watching.',
-                'costs': '💸 Here\'s what it actually costs to build and run STAYGENIE — broken down so you can see exactly where the money goes.',
+                'architecture': '🏗️ Four layers working together — from the React app you see, through Django and my <strong>6 AI brains</strong>, down to the databases.',
+                'gtm': '🚀 GTM = Go-to-Market. We start in <strong>Casablanca</strong>, expand to 3 cities, then go nationwide. Phased and intentional!',
+                'user-flow': '📱 Here\'s how a renter actually uses me — from sign-up to <strong>moving in with confidence</strong>. Four simple steps!',
                 'closing': '🙏 Thank you for listening! Any questions? I\'m ready to discuss <strong>next steps</strong>.'
             };
 

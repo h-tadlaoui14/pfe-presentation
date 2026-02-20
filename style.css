@@ -2059,6 +2059,245 @@ strong {
     }
 }
 
+/* ==================== ARCHITECTURE ==================== */
+.arch-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.arch-layer {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 22px 24px;
+    position: relative;
+}
+
+.arch-frontend {
+    border-left: 3px solid #60a5fa;
+}
+
+.arch-backend {
+    border-left: 3px solid #a78bfa;
+}
+
+.arch-ai {
+    border-left: 3px solid #f472b6;
+}
+
+.arch-data {
+    border-left: 3px solid #34d399;
+}
+
+.arch-layer-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+    opacity: 0.6;
+    margin-bottom: 4px;
+}
+
+.arch-layer-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 4px;
+}
+
+.arch-layer-explain {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    font-style: italic;
+    opacity: 0.7;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.arch-techs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.arch-tech {
+    font-size: 0.72rem;
+    padding: 4px 10px;
+    background: rgba(99, 102, 241, 0.08);
+    border: 1px solid rgba(99, 102, 241, 0.12);
+    border-radius: 20px;
+    color: var(--text);
+    font-weight: 500;
+}
+
+.arch-tech small {
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+.arch-arrow {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    opacity: 0.3;
+    padding: 4px 0;
+}
+
+@media (max-width: 768px) {
+    .arch-techs {
+        gap: 6px;
+    }
+
+    .arch-tech {
+        font-size: 0.65rem;
+        padding: 3px 8px;
+    }
+}
+
+/* ==================== GO-TO-MARKET ==================== */
+.gtm-timeline {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gtm-phase {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    position: relative;
+}
+
+.gtm-phase-badge {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(16, 185, 129, 0.15));
+    color: #a78bfa;
+    margin-bottom: 10px;
+}
+
+.gtm-phase-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 4px;
+}
+
+.gtm-phase-time {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    opacity: 0.6;
+    margin-bottom: 12px;
+}
+
+.gtm-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 14px 0;
+}
+
+.gtm-list li {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    padding: 3px 0 3px 16px;
+    position: relative;
+}
+
+.gtm-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #6366f1;
+    font-weight: 600;
+}
+
+.gtm-channels {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.gtm-channel {
+    font-size: 0.65rem;
+    padding: 3px 8px;
+    background: rgba(16, 185, 129, 0.08);
+    border: 1px solid rgba(16, 185, 129, 0.12);
+    border-radius: 12px;
+    color: #34d399;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .gtm-timeline {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==================== USER FLOW ==================== */
+.flow-steps {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.flow-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 18px 0;
+}
+
+.flow-step-number {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #6366f1, #10b981);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: white;
+}
+
+.flow-step-content {
+    flex: 1;
+}
+
+.flow-step-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 4px;
+}
+
+.flow-step-desc {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+.flow-connector {
+    width: 2px;
+    height: 24px;
+    background: linear-gradient(180deg, rgba(99, 102, 241, 0.3), rgba(16, 185, 129, 0.3));
+    margin-left: 17px;
+}
+
 /* Comparison Matrix */
 .matrix-wrapper {
     overflow-x: auto;
