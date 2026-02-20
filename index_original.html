@@ -1914,47 +1914,190 @@
         <div class="container">
             <div class="section-header fade-up">
                 <span class="section-tag">How It Works</span>
-                <h2 class="section-title">User <span class="gradient-text">Journey</span></h2>
-                <p class="section-desc">A step-by-step walkthrough of how a typical renter uses STAYGENIE — from sign-up
-                    to moving in.</p>
+                <h2 class="section-title">User <span class="gradient-text">Journeys</span></h2>
+                <p class="section-desc">Each type of user gets a tailored experience. Select a persona to see their
+                    step-by-step journey through STAYGENIE.</p>
             </div>
 
-            <div class="flow-steps fade-up delay-1">
-                <div class="flow-step">
-                    <div class="flow-step-number">1</div>
-                    <div class="flow-step-content">
-                        <h4 class="flow-step-title">📱 Sign Up & Set Preferences</h4>
-                        <p class="flow-step-desc">User creates an account and tells Genie what they're looking for:
-                            budget, city, number of rooms, proximity to work or school.</p>
+            <!-- Persona Tabs -->
+            <div class="flow-tabs fade-up delay-1">
+                <button class="flow-tab active" data-persona="renter">🏠 Renter</button>
+                <button class="flow-tab" data-persona="owner">🔑 Owner</button>
+                <button class="flow-tab" data-persona="investor">📈 Investor</button>
+                <button class="flow-tab" data-persona="agency">🏢 Agency</button>
+            </div>
+
+            <!-- RENTER FLOW -->
+            <div class="flow-panel active" id="flow-renter">
+                <div class="flow-steps fade-up delay-1">
+                    <div class="flow-step">
+                        <div class="flow-step-number">1</div>
+                        <div class="flow-step-content">
+                            <h4 class="flow-step-title">📱 Sign Up & Set Preferences</h4>
+                            <p class="flow-step-desc">Create an account and tell Genie what you need: budget, city,
+                                rooms, proximity to work or school. Genie builds your profile instantly.</p>
+                        </div>
+                    </div>
+                    <div class="flow-connector"></div>
+                    <div class="flow-step">
+                        <div class="flow-step-number">2</div>
+                        <div class="flow-step-content">
+                            <h4 class="flow-step-title">🤖 AI Matches & Alerts</h4>
+                            <p class="flow-step-desc">Genie's Property Matcher AI searches listings and sends
+                                personalized alerts. The Subsidy Engine also checks if you qualify for Daam Sakane or
+                                Damane Assakane government aid.</p>
+                        </div>
+                    </div>
+                    <div class="flow-connector"></div>
+                    <div class="flow-step">
+                        <div class="flow-step-number">3</div>
+                        <div class="flow-step-content">
+                            <h4 class="flow-step-title">📄 Smart Contract Review</h4>
+                            <p class="flow-step-desc">Before signing, the Contract Analyzer AI scans the rental
+                                agreement for red flags — unfair clauses, missing terms, or legal issues — and explains
+                                them in plain language.</p>
+                        </div>
+                    </div>
+                    <div class="flow-connector"></div>
+                    <div class="flow-step">
+                        <div class="flow-step-number">4</div>
+                        <div class="flow-step-content">
+                            <h4 class="flow-step-title">🏠 Move In with Confidence</h4>
+                            <p class="flow-step-desc">Sign a verified contract, receive a move-in checklist, and get
+                                ongoing alerts about neighborhood updates, subsidy deadlines, and market changes.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="flow-connector"></div>
-                <div class="flow-step">
-                    <div class="flow-step-number">2</div>
-                    <div class="flow-step-content">
-                        <h4 class="flow-step-title">🤖 AI Matches & Alerts</h4>
-                        <p class="flow-step-desc">Genie's Property Matcher AI searches listings and sends personalized
-                            alerts. The Subsidy Engine also checks if the user qualifies for Daam Sakane or Damane
-                            Assakane aid.</p>
+            </div>
+
+            <!-- OWNER FLOW -->
+            <div class="flow-panel" id="flow-owner">
+                <div class="flow-steps fade-up delay-1">
+                    <div class="flow-step">
+                        <div class="flow-step-number">1</div>
+                        <div class="flow-step-content">
+                            <h4 class="flow-step-title">🏠 List Your Property</h4>
+                            <p class="flow-step-desc">Add your property with photos, location, and pricing. Genie uses
+                                AI to suggest the optimal rent based on neighborhood data (what similar places charge
+                                nearby).</p>
+                        </div>
+                    </div>
+                    <div class="flow-connector"></div>
+                    <div class="flow-step">
+                        <div class="flow-step-number">2</div>
+                        <div class="flow-step-content">
+                            <h4 class="flow-step-title">🔍 AI-Verified Tenants</h4>
+                            <p class="flow-step-desc">Genie screens potential tenants using AI — checking profile
+                                completeness, rental history, and reliability signals. No more guesswork about who to
+                                trust.</p>
+                        </div>
+                    </div>
+                    <div class="flow-connector"></div>
+                    <div class="flow-step">
+                        <div class="flow-step-number">3</div>
+                        <div class="flow-step-content">
+                            <h4 class="flow-step-title">📄 Auto-Generated Contracts</h4>
+                            <p class="flow-step-desc">Genie generates a legally-compliant rental contract based on
+                                Moroccan law, pre-filled with your property details and tenant info. Review, customize,
+                                and sign digitally.</p>
+                        </div>
+                    </div>
+                    <div class="flow-connector"></div>
+                    <div class="flow-step">
+                        <div class="flow-step-number">4</div>
+                        <div class="flow-step-content">
+                            <h4 class="flow-step-title">📊 Dashboard & Insights</h4>
+                            <p class="flow-step-desc">Track rent payments, occupancy status, and maintenance requests.
+                                Get market alerts when your area's rental prices change significantly.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="flow-connector"></div>
-                <div class="flow-step">
-                    <div class="flow-step-number">3</div>
-                    <div class="flow-step-content">
-                        <h4 class="flow-step-title">📄 Smart Contract Review</h4>
-                        <p class="flow-step-desc">Before signing, the Contract Analyzer AI scans the rental agreement
-                            for red flags — unfair clauses, missing terms, or legal issues — and explains them in plain
-                            language.</p>
+            </div>
+
+            <!-- INVESTOR FLOW -->
+            <div class="flow-panel" id="flow-investor">
+                <div class="flow-steps fade-up delay-1">
+                    <div class="flow-step">
+                        <div class="flow-step-number">1</div>
+                        <div class="flow-step-content">
+                            <h4 class="flow-step-title">🎯 Define Investment Criteria</h4>
+                            <p class="flow-step-desc">Set your investment profile: budget range, target cities, property
+                                types, expected rental yield (how much income you want vs. the purchase price).</p>
+                        </div>
+                    </div>
+                    <div class="flow-connector"></div>
+                    <div class="flow-step">
+                        <div class="flow-step-number">2</div>
+                        <div class="flow-step-content">
+                            <h4 class="flow-step-title">🏛️ Subsidy & Financing Check</h4>
+                            <p class="flow-step-desc">Genie checks your eligibility for Daam Sakane subsidies (up to
+                                100,000 MAD) and Damane Assakane mortgage guarantees, then calculates potential ROI
+                                (Return on Investment).</p>
+                        </div>
+                    </div>
+                    <div class="flow-connector"></div>
+                    <div class="flow-step">
+                        <div class="flow-step-number">3</div>
+                        <div class="flow-step-content">
+                            <h4 class="flow-step-title">📊 Market Intelligence Reports</h4>
+                            <p class="flow-step-desc">Receive AI-generated reports on neighborhood trends — price
+                                history, rental demand, upcoming infrastructure projects, and risk analysis for each
+                                zone.</p>
+                        </div>
+                    </div>
+                    <div class="flow-connector"></div>
+                    <div class="flow-step">
+                        <div class="flow-step-number">4</div>
+                        <div class="flow-step-content">
+                            <h4 class="flow-step-title">🔔 Smart Alerts & Portfolio</h4>
+                            <p class="flow-step-desc">Track your portfolio's performance, get alerted to new
+                                opportunities matching your criteria, and monitor how subsidies, taxes, or regulations
+                                may affect your investments.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="flow-connector"></div>
-                <div class="flow-step">
-                    <div class="flow-step-number">4</div>
-                    <div class="flow-step-content">
-                        <h4 class="flow-step-title">🏠 Move In with Confidence</h4>
-                        <p class="flow-step-desc">User signs a verified contract, receives a move-in checklist, and gets
-                            ongoing alerts about neighborhood updates, subsidy deadlines, and market changes.</p>
+            </div>
+
+            <!-- AGENCY FLOW -->
+            <div class="flow-panel" id="flow-agency">
+                <div class="flow-steps fade-up delay-1">
+                    <div class="flow-step">
+                        <div class="flow-step-number">1</div>
+                        <div class="flow-step-content">
+                            <h4 class="flow-step-title">🏢 Agency Onboarding</h4>
+                            <p class="flow-step-desc">Register your agency, import your property portfolio, and connect
+                                your team. Genie syncs your existing listings and fills in missing data using AI.</p>
+                        </div>
+                    </div>
+                    <div class="flow-connector"></div>
+                    <div class="flow-step">
+                        <div class="flow-step-number">2</div>
+                        <div class="flow-step-content">
+                            <h4 class="flow-step-title">🤖 AI-Powered Lead Matching</h4>
+                            <p class="flow-step-desc">Genie automatically matches qualified tenants and buyers to your
+                                listings. No more cold calls — the system sends you pre-screened leads (potential
+                                clients) ranked by fit.</p>
+                        </div>
+                    </div>
+                    <div class="flow-connector"></div>
+                    <div class="flow-step">
+                        <div class="flow-step-number">3</div>
+                        <div class="flow-step-content">
+                            <h4 class="flow-step-title">📈 Performance Analytics</h4>
+                            <p class="flow-step-desc">Real-time dashboards showing listing views, conversion rates (how
+                                many inquiries become deals), average time-to-rent, and team performance — proving ROI
+                                to your clients.</p>
+                        </div>
+                    </div>
+                    <div class="flow-connector"></div>
+                    <div class="flow-step">
+                        <div class="flow-step-number">4</div>
+                        <div class="flow-step-content">
+                            <h4 class="flow-step-title">🏆 Competitive Edge</h4>
+                            <p class="flow-step-desc">Stand out from traditional agencies with AI-driven valuations,
+                                instant contract generation, and subsidy guidance. Offer more value than any competitor
+                                on the market.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -2383,6 +2526,17 @@
             // Initial message
             setTimeout(() => { updateGenieMessage(); }, 500);
         })();
+
+        // User Journey Persona Tabs
+        document.querySelectorAll('.flow-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.flow-tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.flow-panel').forEach(p => p.classList.remove('active'));
+                tab.classList.add('active');
+                const persona = tab.getAttribute('data-persona');
+                document.getElementById('flow-' + persona).classList.add('active');
+            });
+        });
     </script>
 
     <script src="script.js"></script>

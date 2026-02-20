@@ -661,7 +661,7 @@ strong {
 
 .tab-role {
     font-size: 0.75rem;
-    opacity: 0.7;
+    opacity: 0.9;
 }
 
 .persona-content {
@@ -1698,12 +1698,12 @@ strong {
 }
 
 .revenue-explainer {
-    font-size: 0.68rem;
+    font-size: 0.72rem;
     font-style: italic;
     color: var(--text-muted);
-    opacity: 0.7;
+    opacity: 0.9;
     margin-bottom: 10px;
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
 .revenue-price {
@@ -1899,10 +1899,10 @@ strong {
 }
 
 .swot-explain {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     font-style: italic;
     color: var(--text-muted);
-    opacity: 0.7;
+    opacity: 0.9;
     margin-bottom: 14px;
 }
 
@@ -1954,12 +1954,12 @@ strong {
 }
 
 .cost-category-explain {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     font-style: italic;
     color: var(--text-muted);
-    opacity: 0.7;
+    opacity: 0.9;
     margin-bottom: 16px;
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
 .cost-items {
@@ -2098,7 +2098,7 @@ strong {
     text-transform: uppercase;
     letter-spacing: 0.06em;
     color: var(--text-muted);
-    opacity: 0.6;
+    opacity: 0.85;
     margin-bottom: 4px;
 }
 
@@ -2110,12 +2110,12 @@ strong {
 }
 
 .arch-layer-explain {
-    font-size: 0.72rem;
+    font-size: 0.75rem;
     color: var(--text-muted);
     font-style: italic;
-    opacity: 0.7;
+    opacity: 0.9;
     margin-bottom: 12px;
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
 .arch-techs {
@@ -2196,7 +2196,7 @@ strong {
 .gtm-phase-time {
     font-size: 0.72rem;
     color: var(--text-muted);
-    opacity: 0.6;
+    opacity: 0.85;
     margin-bottom: 12px;
 }
 
@@ -2245,6 +2245,45 @@ strong {
 }
 
 /* ==================== USER FLOW ==================== */
+.flow-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+}
+
+.flow-tab {
+    padding: 8px 18px;
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    background: var(--card-bg);
+    color: var(--text-muted);
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.flow-tab:hover {
+    border-color: rgba(99, 102, 241, 0.3);
+    color: var(--text);
+}
+
+.flow-tab.active {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(16, 185, 129, 0.15));
+    border-color: rgba(99, 102, 241, 0.4);
+    color: var(--text);
+}
+
+.flow-panel {
+    display: none;
+}
+
+.flow-panel.active {
+    display: block;
+}
+
 .flow-steps {
     max-width: 700px;
     margin: 0 auto;
