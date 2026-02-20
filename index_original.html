@@ -1909,6 +1909,32 @@
         </div>
     </section>
 
+    <!-- Notes Panel -->
+    <div class="section-notes-wrapper fade-up">
+        <div class="notes-toggle" id="notes-toggle-problem" onclick="toggleNotesPanel('problem')">
+            <div class="notes-toggle-left">
+                📝 Notes & Feedback
+                <span class="notes-toggle-count" id="notes-count-problem">0</span>
+            </div>
+            <span class="notes-toggle-arrow">▼</span>
+        </div>
+        <div class="notes-panel" id="notes-panel-problem">
+            <div class="notes-author-bar">
+                <span class="notes-author-label">Posting as:</span>
+                <button class="author-toggle-btn active" data-author="Intern">🎓 Intern</button>
+                <button class="author-toggle-btn" data-author="Stakeholder">👤 Stakeholder</button>
+            </div>
+            <div class="note-input-row">
+                <input type="text" class="note-input" id="note-input-problem"
+                    placeholder="Add a note about the Problem section...">
+                <button class="note-add-btn" onclick="NotesManager.add('problem')">Add Note</button>
+            </div>
+            <div class="notes-list" id="notes-list-problem"></div>
+        </div>
+    </div>
+    </div>
+    </section>
+
     <!-- USER FLOW SECTION -->
     <section id="user-flow" class="section">
         <div class="container">
@@ -2103,6 +2129,33 @@
             </div>
         </div>
     </section>
+
+    <!-- Notes Panel -->
+    <div class="section-notes-wrapper fade-up">
+        <div class="notes-toggle" id="notes-toggle-problem" onclick="toggleNotesPanel('problem')">
+            <div class="notes-toggle-left">
+                📝 Notes & Feedback
+                <span class="notes-toggle-count" id="notes-count-problem">0</span>
+            </div>
+            <span class="notes-toggle-arrow">▼</span>
+        </div>
+        <div class="notes-panel" id="notes-panel-problem">
+            <div class="notes-author-bar">
+                <span class="notes-author-label">Posting as:</span>
+                <button class="author-toggle-btn active" data-author="Intern">🎓 Intern</button>
+                <button class="author-toggle-btn" data-author="Stakeholder">👤 Stakeholder</button>
+            </div>
+            <div class="note-input-row">
+                <input type="text" class="note-input" id="note-input-problem"
+                    placeholder="Add a note about the Problem section...">
+                <button class="note-add-btn" onclick="NotesManager.add('problem')">Add Note</button>
+            </div>
+            <div class="notes-list" id="notes-list-problem"></div>
+        </div>
+    </div>
+    </div>
+    </section>
+
 
     <!-- FEATURE VALIDATION BOARD -->
     <section id="feature-board" class="section">
