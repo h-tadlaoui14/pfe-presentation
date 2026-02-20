@@ -1405,6 +1405,116 @@ strong {
     font-size: 1rem;
 }
 
+/* Strength & Gap section labels */
+.comp-section-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+}
+
+.comp-label-good {
+    color: #10b981;
+}
+
+.comp-label-bad {
+    color: #ef4444;
+}
+
+.gap-check {
+    color: #10b981;
+    font-weight: 700;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+    width: 16px;
+    text-align: center;
+}
+
+.comp-strengths {
+    margin-bottom: 8px;
+}
+
+.comp-strategy {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 10px 14px;
+    background: rgba(99, 102, 241, 0.06);
+    border: 1px solid rgba(99, 102, 241, 0.15);
+    border-radius: var(--radius-sm);
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-top: 8px;
+}
+
+/* Strategy Callout */
+.strategy-callout {
+    margin-top: 48px;
+    background: rgba(99, 102, 241, 0.05);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    border-radius: var(--radius);
+    padding: 32px;
+}
+
+.strategy-callout-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.strategy-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.strategy-col h5 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.strategy-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.strategy-col ul li {
+    font-size: 0.82rem;
+    padding: 6px 0;
+    color: var(--text-muted);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.strategy-col ul li:last-child {
+    border-bottom: none;
+}
+
+.strategy-col-adopt {
+    background: rgba(16, 185, 129, 0.05);
+    border-radius: var(--radius-sm);
+    padding: 20px;
+    border: 1px solid rgba(16, 185, 129, 0.15);
+}
+
+.strategy-col-fix {
+    background: rgba(245, 158, 11, 0.05);
+    border-radius: var(--radius-sm);
+    padding: 20px;
+    border: 1px solid rgba(245, 158, 11, 0.15);
+}
+
+@media (max-width: 640px) {
+    .strategy-columns {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Comparison Matrix */
 .matrix-wrapper {
     overflow-x: auto;
