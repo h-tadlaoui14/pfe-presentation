@@ -124,6 +124,8 @@ const NotesManager = {
         const sections = ['problem', 'market-size', 'positioning', 'why-now', 'competitors', 'personas', 'ai-engines', 'architecture', 'impact', 'roadmap', 'revenue', 'gtm', 'user-flow', 'swot'];
         sections.forEach(sectionId => {
             Storage.listen(`notes/${sectionId}`, (notes) => {
+                // Save to localStorage so globalCount (which reads from local) stays in sync
+                localStorage.setItem('sg_notes_' + sectionId, JSON.stringify(notes || {}));
                 this.render(sectionId, notes);
                 this.updateGlobalCount();
             });
@@ -200,7 +202,7 @@ const NotesManager = {
             <div class="note-card" data-status="${note.status}">
                 <div class="note-header">
                     <span class="note-author" style="background: ${note.author === 'Intern' ? 'rgba(99,102,241,0.2); color:#a5b4fc' : 'rgba(236,72,153,0.2); color:#f9a8d4'}">
-                        ${note.author === 'Intern' ? '🎓' : '👤'} ${note.author === 'Stakeholder' ? 'Manager' : note.author}
+                        ${note.author === 'Intern' ? '🎓' : '👤'} ${note.author}
                     </span>
                     <span class="note-time">${note.date || ''} ${note.time || ''}</span>
                 </div>
