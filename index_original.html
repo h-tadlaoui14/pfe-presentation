@@ -153,7 +153,7 @@
                     <div class="notes-author-bar">
                         <span class="notes-author-label">Posting as:</span>
                         <button class="author-toggle-btn active" data-author="Intern">🎓 Intern</button>
-                        <button class="author-toggle-btn" data-author="Stakeholder">👤 Stakeholder</button>
+                        <button class="author-toggle-btn" data-author="Manager">👤 Manager</button>
                     </div>
                     <div class="note-input-row">
                         <input type="text" class="note-input" id="note-input-problem"
@@ -234,6 +234,30 @@
                 were filed in 2024, yet thousands more qualify and don't know it. Average salary in Casablanca is ~4,000
                 MAD/month while apartment prices average 16,457 MAD/m² — making homeownership unattainable for many,
                 pushing the majority toward <strong>renting</strong>. This is exactly STAYGENIE's core market.</p>
+
+            <!-- Notes Panel -->
+            <div class="section-notes-wrapper fade-up">
+                <div class="notes-toggle" id="notes-toggle-market-size" onclick="toggleNotesPanel('market-size')">
+                    <div class="notes-toggle-left">
+                        📝 Notes & Feedback
+                        <span class="notes-toggle-count" id="notes-count-market-size">0</span>
+                    </div>
+                    <span class="notes-toggle-arrow">▼</span>
+                </div>
+                <div class="notes-panel" id="notes-panel-market-size">
+                    <div class="notes-author-bar">
+                        <span class="notes-author-label">Posting as:</span>
+                        <button class="author-toggle-btn active" data-author="Intern">🎓 Intern</button>
+                        <button class="author-toggle-btn" data-author="Manager">👤 Manager</button>
+                    </div>
+                    <div class="note-input-row">
+                        <input type="text" class="note-input" id="note-input-market-size"
+                            placeholder="Add a note about the Market Size section...">
+                        <button class="note-add-btn" onclick="NotesManager.add('market-size')">Add Note</button>
+                    </div>
+                    <div class="notes-list" id="notes-list-market-size"></div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -310,7 +334,7 @@
                     <div class="notes-author-bar">
                         <span class="notes-author-label">Posting as:</span>
                         <button class="author-toggle-btn active" data-author="Intern">🎓 Intern</button>
-                        <button class="author-toggle-btn" data-author="Stakeholder">👤 Stakeholder</button>
+                        <button class="author-toggle-btn" data-author="Manager">👤 Manager</button>
                     </div>
                     <div class="note-input-row">
                         <input type="text" class="note-input" id="note-input-positioning"
@@ -362,6 +386,30 @@
                     <p class="why-now-desc">Morocco is co-hosting the <strong>FIFA World Cup 2030</strong>. This means
                         massive investment in infrastructure, short-term rental demand, and international attention on
                         Morocco's housing ecosystem.</p>
+                </div>
+            </div>
+
+            <!-- Notes Panel -->
+            <div class="section-notes-wrapper fade-up">
+                <div class="notes-toggle" id="notes-toggle-why-now" onclick="toggleNotesPanel('why-now')">
+                    <div class="notes-toggle-left">
+                        📝 Notes & Feedback
+                        <span class="notes-toggle-count" id="notes-count-why-now">0</span>
+                    </div>
+                    <span class="notes-toggle-arrow">▼</span>
+                </div>
+                <div class="notes-panel" id="notes-panel-why-now">
+                    <div class="notes-author-bar">
+                        <span class="notes-author-label">Posting as:</span>
+                        <button class="author-toggle-btn active" data-author="Intern">🎓 Intern</button>
+                        <button class="author-toggle-btn" data-author="Manager">👤 Manager</button>
+                    </div>
+                    <div class="note-input-row">
+                        <input type="text" class="note-input" id="note-input-why-now"
+                            placeholder="Add a note about the Why Now section...">
+                        <button class="note-add-btn" onclick="NotesManager.add('why-now')">Add Note</button>
+                    </div>
+                    <div class="notes-list" id="notes-list-why-now"></div>
                 </div>
             </div>
         </div>
@@ -670,7 +718,7 @@
                     <div class="notes-author-bar">
                         <span class="notes-author-label">Posting as:</span>
                         <button class="author-toggle-btn active" data-author="Intern">🎓 Intern</button>
-                        <button class="author-toggle-btn" data-author="Stakeholder">👤 Stakeholder</button>
+                        <button class="author-toggle-btn" data-author="Manager">👤 Manager</button>
                     </div>
                     <div class="note-input-row">
                         <input type="text" class="note-input" id="note-input-competitors"
@@ -1561,6 +1609,30 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Notes Panel -->
+            <div class="section-notes-wrapper fade-up">
+                <div class="notes-toggle" id="notes-toggle-architecture" onclick="toggleNotesPanel('architecture')">
+                    <div class="notes-toggle-left">
+                        📝 Notes & Feedback
+                        <span class="notes-toggle-count" id="notes-count-architecture">0</span>
+                    </div>
+                    <span class="notes-toggle-arrow">▼</span>
+                </div>
+                <div class="notes-panel" id="notes-panel-architecture">
+                    <div class="notes-author-bar">
+                        <span class="notes-author-label">Posting as:</span>
+                        <button class="author-toggle-btn active" data-author="Intern">🎓 Intern</button>
+                        <button class="author-toggle-btn" data-author="Manager">👤 Manager</button>
+                    </div>
+                    <div class="note-input-row">
+                        <input type="text" class="note-input" id="note-input-architecture"
+                            placeholder="Add a note about the Architecture section...">
+                        <button class="note-add-btn" onclick="NotesManager.add('architecture')">Add Note</button>
+                    </div>
+                    <div class="notes-list" id="notes-list-architecture"></div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -1838,6 +1910,30 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Notes Panel -->
+            <div class="section-notes-wrapper fade-up">
+                <div class="notes-toggle" id="notes-toggle-revenue" onclick="toggleNotesPanel('revenue')">
+                    <div class="notes-toggle-left">
+                        📝 Notes & Feedback
+                        <span class="notes-toggle-count" id="notes-count-revenue">0</span>
+                    </div>
+                    <span class="notes-toggle-arrow">▼</span>
+                </div>
+                <div class="notes-panel" id="notes-panel-revenue">
+                    <div class="notes-author-bar">
+                        <span class="notes-author-label">Posting as:</span>
+                        <button class="author-toggle-btn active" data-author="Intern">🎓 Intern</button>
+                        <button class="author-toggle-btn" data-author="Manager">👤 Manager</button>
+                    </div>
+                    <div class="note-input-row">
+                        <input type="text" class="note-input" id="note-input-revenue"
+                            placeholder="Add a note about the Revenue section...">
+                        <button class="note-add-btn" onclick="NotesManager.add('revenue')">Add Note</button>
+                    </div>
+                    <div class="notes-list" id="notes-list-revenue"></div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -1904,6 +2000,30 @@
                         <span class="gtm-channel">API Partnerships</span>
                         <span class="gtm-channel">Government Programs</span>
                     </div>
+                </div>
+            </div>
+
+            <!-- Notes Panel -->
+            <div class="section-notes-wrapper fade-up">
+                <div class="notes-toggle" id="notes-toggle-gtm" onclick="toggleNotesPanel('gtm')">
+                    <div class="notes-toggle-left">
+                        📝 Notes & Feedback
+                        <span class="notes-toggle-count" id="notes-count-gtm">0</span>
+                    </div>
+                    <span class="notes-toggle-arrow">▼</span>
+                </div>
+                <div class="notes-panel" id="notes-panel-gtm">
+                    <div class="notes-author-bar">
+                        <span class="notes-author-label">Posting as:</span>
+                        <button class="author-toggle-btn active" data-author="Intern">🎓 Intern</button>
+                        <button class="author-toggle-btn" data-author="Manager">👤 Manager</button>
+                    </div>
+                    <div class="note-input-row">
+                        <input type="text" class="note-input" id="note-input-gtm"
+                            placeholder="Add a note about the Launch Strategy section...">
+                        <button class="note-add-btn" onclick="NotesManager.add('gtm')">Add Note</button>
+                    </div>
+                    <div class="notes-list" id="notes-list-gtm"></div>
                 </div>
             </div>
         </div>
@@ -2102,6 +2222,30 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Notes Panel -->
+            <div class="section-notes-wrapper fade-up">
+                <div class="notes-toggle" id="notes-toggle-user-flow" onclick="toggleNotesPanel('user-flow')">
+                    <div class="notes-toggle-left">
+                        📝 Notes & Feedback
+                        <span class="notes-toggle-count" id="notes-count-user-flow">0</span>
+                    </div>
+                    <span class="notes-toggle-arrow">▼</span>
+                </div>
+                <div class="notes-panel" id="notes-panel-user-flow">
+                    <div class="notes-author-bar">
+                        <span class="notes-author-label">Posting as:</span>
+                        <button class="author-toggle-btn active" data-author="Intern">🎓 Intern</button>
+                        <button class="author-toggle-btn" data-author="Manager">👤 Manager</button>
+                    </div>
+                    <div class="note-input-row">
+                        <input type="text" class="note-input" id="note-input-user-flow"
+                            placeholder="Add a note about the User Journeys section...">
+                        <button class="note-add-btn" onclick="NotesManager.add('user-flow')">Add Note</button>
+                    </div>
+                    <div class="notes-list" id="notes-list-user-flow"></div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -2192,6 +2336,30 @@
                         <li>International competitors (Zillow, Airbnb) could enter Morocco</li>
                         <li>User trust barriers in sharing financial data with an AI</li>
                     </ul>
+                </div>
+            </div>
+
+            <!-- Notes Panel -->
+            <div class="section-notes-wrapper fade-up">
+                <div class="notes-toggle" id="notes-toggle-swot" onclick="toggleNotesPanel('swot')">
+                    <div class="notes-toggle-left">
+                        📝 Notes & Feedback
+                        <span class="notes-toggle-count" id="notes-count-swot">0</span>
+                    </div>
+                    <span class="notes-toggle-arrow">▼</span>
+                </div>
+                <div class="notes-panel" id="notes-panel-swot">
+                    <div class="notes-author-bar">
+                        <span class="notes-author-label">Posting as:</span>
+                        <button class="author-toggle-btn active" data-author="Intern">🎓 Intern</button>
+                        <button class="author-toggle-btn" data-author="Manager">👤 Manager</button>
+                    </div>
+                    <div class="note-input-row">
+                        <input type="text" class="note-input" id="note-input-swot"
+                            placeholder="Add a note about the SWOT section...">
+                        <button class="note-add-btn" onclick="NotesManager.add('swot')">Add Note</button>
+                    </div>
+                    <div class="notes-list" id="notes-list-swot"></div>
                 </div>
             </div>
         </div>

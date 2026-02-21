@@ -13,7 +13,7 @@ Comment l'Intelligence Artificielle peut-elle restructurer un marché immobilier
 **Objectifs du stage :**
 - Développer une solution technique couvrant l'ensemble du cycle de vie immobilier (Recherche, Transaction, Gestion Locative).
 - Intégrer des moteurs d'IA pour la vérification de dossiers, l'analyse prédictive de rendement et l'assistance juridique (contrats).
-- Concevoir une UX centrée sur la confiance et l'accompagnement personnalisé (Personas : Locataire, Propriétaire, Investisseur).
+- Concevoir une UX centrée sur la confiance et l'accompagnement personnalisé (Personas : Locataire, Propriétaire, Investisseur, Institutionnel, Partenaire Agence).
 
 ---
 
@@ -21,16 +21,18 @@ Comment l'Intelligence Artificielle peut-elle restructurer un marché immobilier
 
 ### 🎯 Tâches et missions réalisées
 - **Définition stratégique du produit** : Clarification de la proposition de valeur unique (Plateforme "All-in-One" vs simples sites d'annonces) et structuration des 4 piliers (Louer, Gérer, Investir, Financer).
-- **Création des Personas et Parcours Utilisateurs** : Développement détaillé de 4 profils clés (Locataire, Propriétaire, Investisseur, Institutionnel) et cartographie de leurs parcours "avant vs après StayGenie".
-- **Développement du Prototype Web de Présentation** : Transformation des livrables statiques en **site web interactif haute-fidélité** pour la réunion de validation.
-  - Implémentation d'une "Gap Matrix" interactive.
-  - Animations de défilement et navigation fluide.
-  - Design "Dark Mode" premium pour refléter l'innovation.
+- **Création des Personas et Parcours Utilisateurs** : Développement détaillé de **5 profils clés** (ajout du profil "Partenaire Agence B2B") et cartographie de leurs parcours "avant vs après StayGenie".
+  - Intégration d'un **système de feedback temps réel** (Firebase) harmonisé sur l'ensemble des 14 sections stratégiques de la présentation.
+  - Mise en place du **rôle "Manager" avec accès sécurisé** par mot de passe (`staygenie2026`) pour le contrôle des retours stakeholders.
+  - Transformation des livrables statiques en prototype haute-fidélité sécurisé par **StatiCrypt**.
+  - Animations de défilement et navigation fluide en "Dark Mode" premium.
 
 ### 🛠️ Compétences techniques mises en œuvre
-- **Développement Frontend** : HTML5 sémantique, CSS3 avancé (Variables, Flexbox, Grid, Glassmorphism), JavaScript (IntersectionObserver pour les animations).
+- **Développement Frontend** : HTML5 sémantique, CSS3 avancé (Glassmorphism, Grid/Flexbox), JavaScript (IntersectionObserver).
+- **Intégration Backend-as-a-Service** : Mise en œuvre de **Firebase Realtime Database** pour le stockage et la synchronisation des notes/votes.
+- **Cybersécurité** : Mise en œuvre du chiffrement **StatiCrypt** (AES-256) et d'un système de contrôle d'accès par rôle (RBAC) par mot de passe interne.
 - **UX/UI Design** : Conception d'une interface immersive centrée sur le storytelling.
-- **Analyse Concurrentielle** : Comparaison technique et fonctionnelle avec les acteurs du marché (Avito, Mubawab).
+- **Analyse Métier (B2B)** : Modélisation des besoins des agences immobilières pour l'automatisation de la gestion.
 
 ### 🚀 Apprentissages et Nouveautés
 - **Intégration "AI-First"** : Compréhension approfondie de comment l'IA peut transformer des processus immobiliers concrets (analyse de contrats, vérification de dossiers, calcul de rendement locatif).

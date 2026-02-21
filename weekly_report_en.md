@@ -13,7 +13,7 @@ How can Artificial Intelligence restructure a fragmented and opaque real estate 
 **Internship Objectives:**
 - Develop a technical solution covering the entire real estate lifecycle (Search, Transaction, Rental Management).
 - Integrate AI engines for dossier verification, predictive yield analysis, and legal assistance (contracts).
-- Design a UX focused on trust and personalized guidance (Personas: Renter, Owner, Investor).
+- Design a UX focused on trust and personalized guidance (Personas: Renter, Owner, Investor, Institution, Agency Partner).
 
 ---
 
@@ -21,16 +21,18 @@ How can Artificial Intelligence restructure a fragmented and opaque real estate 
 
 ### 🎯 Tasks and Missions Accomplished
 - **Strategic Product Definition:** Clarification of the unique value proposition ("All-in-One" Platform vs. simple listing sites) and structuring of the 4 pillars (Rent, Manage, Invest, Finance).
-- **Creation of Personas and User Journeys:** Detailed development of 4 key profiles (Renter, Owner, Investor, Institution) and mapping of their "before vs. after StayGenie" journeys.
-- **Development of the Web Presentation Prototype:** Transformation of static deliverables into a **high-fidelity interactive website** for the validation meeting.
-  - Implementation of an interactive "Gap Matrix".
-  - Scroll animations and fluid navigation.
-  - Premium "Dark Mode" design to reflect innovation.
+- **Creation of Personas and User Journeys:** Detailed development of **5 key profiles** (adding the B2B Agency Partner profile) and mapping of their "before vs. after StayGenie" journeys.
+  - Integration of a **real-time feedback system** (Firebase) harmonized across all 14 strategic presentation sections.
+  - Implementation of a **Manager role with secure access** via internal password (`staygenie2026`) for stakeholder feedback control.
+  - Transformation of static deliverables into a high-fidelity prototype secured by **StatiCrypt**.
+  - Scroll animations and fluid navigation in premium "Dark Mode".
 
 ### 🛠️ Technical Skills Implemented
-- **Frontend Development:** Semantic HTML5, Advanced CSS3 (Variables, Flexbox, Grid, Glassmorphism), JavaScript (IntersectionObserver for animations).
+- **Frontend Development:** Semantic HTML5, Advanced CSS3 (Glassmorphism, Grid/Flexbox), JavaScript (IntersectionObserver).
+- **Backend-as-a-Service Integration:** Implementation of **Firebase Realtime Database** for note storage and live synchronization.
+- **Cybersecurity:** Implementation of **StatiCrypt** (AES-256) encryption and an internal Role-Based Access Control (RBAC) system for secure feedback management.
 - **UX/UI Design:** Design of an immersive interface centered on storytelling.
-- **Competitive Analysis:** Technical and functional comparison with market players (Avito, Mubawab).
+- **B2B Business Analysis:** Modeling the needs of real estate agencies for property management automation.
 
 ### 🚀 Learnings and News
 - **"AI-First" Integration:** Deep understanding of how AI can transform concrete real estate processes (contract analysis, dossier verification, rental yield calculation).

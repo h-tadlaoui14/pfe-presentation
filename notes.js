@@ -98,6 +98,13 @@ const AuthorManager = {
         return localStorage.getItem('sg_author') || 'Intern';
     },
     set(name) {
+        if (name === 'Manager') {
+            const pw = prompt("Please enter the Manager password to continue:");
+            if (pw !== "staygenie2026") {
+                alert("Incorrect password. Access denied.");
+                return;
+            }
+        }
         localStorage.setItem('sg_author', name);
         document.querySelectorAll('.author-toggle-btn').forEach(btn => {
             btn.classList.toggle('active', btn.dataset.author === name);
@@ -114,7 +121,7 @@ const NotesManager = {
     statusColors: { 'new': '#6366f1', 'in-progress': '#f59e0b', 'done': '#10b981' },
 
     init() {
-        const sections = ['problem', 'positioning', 'competitors', 'personas', 'ai-engines', 'impact', 'roadmap'];
+        const sections = ['problem', 'market-size', 'positioning', 'why-now', 'competitors', 'personas', 'ai-engines', 'architecture', 'impact', 'roadmap', 'revenue', 'gtm', 'user-flow', 'swot'];
         sections.forEach(sectionId => {
             Storage.listen(`notes/${sectionId}`, (notes) => {
                 this.render(sectionId, notes);
@@ -193,7 +200,7 @@ const NotesManager = {
             <div class="note-card" data-status="${note.status}">
                 <div class="note-header">
                     <span class="note-author" style="background: ${note.author === 'Intern' ? 'rgba(99,102,241,0.2); color:#a5b4fc' : 'rgba(236,72,153,0.2); color:#f9a8d4'}">
-                        ${note.author === 'Intern' ? '🎓' : '👤'} ${note.author}
+                        ${note.author === 'Intern' ? '🎓' : '👤'} ${note.author === 'Stakeholder' ? 'Manager' : note.author}
                     </span>
                     <span class="note-time">${note.date || ''} ${note.time || ''}</span>
                 </div>
@@ -216,7 +223,7 @@ const NotesManager = {
     },
 
     updateGlobalCount() {
-        const sections = ['problem', 'positioning', 'competitors', 'personas', 'ai-engines', 'impact', 'roadmap'];
+        const sections = ['problem', 'market-size', 'positioning', 'why-now', 'competitors', 'personas', 'ai-engines', 'architecture', 'impact', 'roadmap', 'revenue', 'gtm', 'user-flow', 'swot'];
         let total = 0, pending = 0, done = 0;
 
         sections.forEach(sectionId => {
@@ -236,7 +243,7 @@ const NotesManager = {
 };
 
 // ========================
-// Feature Validation Board (Stakeholder-only voting)
+// Feature Validation Board (Manager-only voting)
 // ========================
 const FeatureBoard = {
     features: [
