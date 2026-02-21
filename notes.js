@@ -97,6 +97,9 @@ const AuthorManager = {
     get() {
         return localStorage.getItem('sg_author') || 'Intern';
     },
+    isVerified() {
+        return sessionStorage.getItem('sg_manager_verified') === 'true';
+    },
     set(name) {
         if (name === 'Manager') {
             const pw = prompt("Please enter the Manager password to continue:");
@@ -104,6 +107,7 @@ const AuthorManager = {
                 alert("Incorrect password. Access denied.");
                 return;
             }
+            sessionStorage.setItem('sg_manager_verified', 'true');
         }
         localStorage.setItem('sg_author', name);
         document.querySelectorAll('.author-toggle-btn').forEach(btn => {
@@ -280,14 +284,11 @@ const FeatureBoard = {
     },
 
     vote(featureId, priority) {
-        Storage.update(`features/${featureId}`, { vote: priority });
-        if (!firebaseReady) {
-            const data = JSON.parse(localStorage.getItem('sg_features') || '{}');
-            if (!data[featureId]) data[featureId] = {};
-            data[featureId].vote = priority;
-            localStorage.setItem('sg_features', JSON.stringify(data));
-            this.render(data);
+        if (!AuthorManager.isVerified()) {
+            alert("Manager verification required to vote on the Feature Board. Please switch to 'Manager' role first.");
+            return;
         }
+        Storage.update(`features/${featureId}`, { vote: priority });
     },
 
     addComment(featureId) {
@@ -434,7 +435,14 @@ document.addEventListener('DOMContentLoaded', () => {
     initFirebase();
 
     // Set default author
-    const currentAuthor = AuthorManager.get();
+    let currentAuthor = AuthorManager.get();
+
+    // Security check: If Manager but session not verified, reset to Intern
+    if (currentAuthor === 'Manager' && !AuthorManager.isVerified()) {
+        currentAuthor = 'Intern';
+        localStorage.setItem('sg_author', 'Intern');
+    }
+
     document.querySelectorAll('.author-toggle-btn').forEach(btn => {
         btn.classList.toggle('active', btn.dataset.author === currentAuthor);
         btn.addEventListener('click', () => AuthorManager.set(btn.dataset.author));
