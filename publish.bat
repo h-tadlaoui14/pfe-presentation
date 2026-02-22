@@ -40,4 +40,3 @@ echo ==========================================
 echo   SUCCESS! Site updated.
 echo   Wait ~1-2 mins for changes to appear.
 echo ==========================================
-pause
