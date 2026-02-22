@@ -4,15 +4,24 @@ This document analyzes the best-in-class technology stack for STAYGENIE and comp
 
 ## 🏛️ Competitor Landscape
 
-| Competitor | Core Stack (Research Findings) | AI Approach | Strategy |
+| Competitor | Core Stack | Premium Services | AI Approach |
 |---|---|---|---|
-| **Avito.ma** | Flask, Tornado, MongoDB, Kafka | Basic ML for ads/recs | High-volume classifieds (Monolith legacy) |
-| **Mubawab.ma** | Traditional PHP/Web | GA integration, Smart pricing | Listing management and ease-of-use |
-| **Sarouty.ma** | Disruptive tendencies | AI virtual assistants (PropTech focus) | Innovation-led search |
+| **Avito.ma** | Flask, Tornado, MongoDB | Branded Boutiques, Premium Ads, Broad Marketplace | Basic ML for ads/recs |
+| **Mubawab.ma** | Traditional PHP/Web | Mubawab Transaction (New builds), Lead Gen Tools | Smart pricing & recommendations |
+| **Sarouty.ma** | PropTech focus | SAROUTY Real Estate (Valuation & Management) | AI virtual assistants (Market data) |
+| **STAYGENIE** | **Next.js + FastAPI** | **Subsidy-as-a-Service, Contract Intelligence** | **Conversational Reasoning (GPT-4)** |
 
 ## 🧠 STAYGENIE's "AI-First" Advantage
 
-Traditional portals are built as **Catalogs** (SQL-first). STAYGENIE is built as a **Reasoning Engine** (AI-first).
+Traditional portals are built as **Catalogs** (SQL-first) with premium visibility services. STAYGENIE is built as a **Reasoning Engine** (AI-first) with premium intelligence services.
+
+| Feature | Portals (Avito/Mubawab/Sarouty) | STAYGENIE |
+|---|---|---|
+| **Search** | Keyword & Filters (Rigid) | **Conversational & Intent-based** |
+| **Subsidies** | Static links or general info | **Real-time Eligibility Engine (Engine 02)** |
+| **Management** | Listing tools & basic dashboards | **Property Management AI (Engine 06)** |
+| **Trust** | Verified badges (Basic) | **Trust & Risk Scoring (Engine 05)** |
+| **Expansion** | Volume-driven (More ads) | **Intelligence-driven (Better decisions)** |
 
 | Layer | STAYGENIE Choice | Why it's the "Best" for you | Competitor Status |
 |---|---|---|---|
