@@ -2487,12 +2487,12 @@
 
     <!-- FLOATING AI ROBOT ASSISTANT -->
     <div id="genie-bot" class="genie-bot">
-        <div class="genie-bubble" id="genie-bubble">
+        <div class="genie-bubble" id="genie-bubble" style="max-width: 300px;">
             <button class="genie-close" id="genie-close">&times;</button>
             <div class="genie-msg" id="genie-msg">👋 Hi! I'm <strong>Genie</strong>, your AI advisor. Scroll down — I'll
                 guide you!</div>
             <div class="genie-input-area" id="genie-input-area"
-                style="display: none; margin-top: 12px; border-top: 1px solid rgba(139, 92, 246, 0.2); padding-top: 10px;">
+                style="margin-top: 12px; border-top: 1px solid rgba(139, 92, 246, 0.2); padding-top: 10px;">
                 <input type="text" id="genie-user-input" placeholder="Ask me something..."
                     style="width: 100%; background: rgba(255,255,255,0.05); border: 1px solid rgba(139,92,246,0.3); border-radius: 8px; padding: 8px 10px; color: #fff; font-size: 0.8rem; margin-bottom: 6px;">
                 <button onclick="GenieBot.ask()"
@@ -2738,13 +2738,15 @@
                     }
                 });
 
-                if (newSection !== currentSection && messages[newSection]) {
+                if (!isTyping && newSection !== currentSection && messages[newSection]) {
                     currentSection = newSection;
                     if (bubbleVisible) {
                         bubble.classList.add('hidden');
                         setTimeout(() => {
-                            msgEl.innerHTML = messages[newSection];
-                            bubble.classList.remove('hidden');
+                            if (!isTyping) { // Double check
+                                msgEl.innerHTML = messages[newSection];
+                                bubble.classList.remove('hidden');
+                            }
                         }, 350);
                     } else {
                         msgEl.innerHTML = messages[newSection];
@@ -2756,14 +2758,26 @@
             // Initial message
             setTimeout(() => { updateGenieMessage(); }, 500);
 
+            // STOP scroll updates when user is typing
+            const userInput = document.getElementById('genie-user-input');
+            let isTyping = false;
+
+            if (userInput) {
+                userInput.addEventListener('focus', () => { isTyping = true; });
+                userInput.addEventListener('blur', () => { isTyping = false; });
+            }
+
             // Global access for the onclick handler
             window.GenieBot = {
                 ask() {
                     const input = document.getElementById('genie-user-input');
                     const msgEl = document.getElementById('genie-msg');
+                    if (!input || !msgEl) return;
+
                     const text = input.value.trim().toLowerCase();
                     if (!text) return;
 
+                    isTyping = true; // Keep it focused
                     input.value = '';
                     msgEl.innerHTML = "Thinking...";
 
@@ -2780,14 +2794,6 @@
                     }, 800);
                 }
             };
-
-            // Show input area after a short delay
-            setTimeout(() => {
-                const inputArea = document.getElementById('genie-input-area');
-                if (inputArea) inputArea.style.display = 'block';
-                const bubble = document.getElementById('genie-bubble');
-                if (bubble) bubble.style.maxWidth = '300px';
-            }, 3000);
         })();
 
         // User Journey Persona Tabs
