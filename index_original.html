@@ -1508,6 +1508,44 @@
                 </div>
             </div>
 
+            <!-- INTERACTIVE SUBSIDY ESTIMATOR -->
+            <div class="subsidy-estimator fade-up delay-2">
+                <div class="estimator-header">
+                    <h4>🏛️ Engine 02: Subsidy Estimator</h4>
+                    <p class="section-desc" style="margin:0; font-size: 0.95rem;">Real-time calculation based on
+                        <strong>Daam Sakane (2024-2028)</strong> regulations.
+                    </p>
+                </div>
+                <div class="estimator-grid">
+                    <div class="estimator-inputs">
+                        <div class="input-group">
+                            <label for="property-price">Property Price (MAD)</label>
+                            <input type="number" id="property-price" placeholder="e.g. 250000" value="250000">
+                        </div>
+                        <div class="input-group">
+                            <label for="monthly-income">Monthly Income (MAD)</label>
+                            <input type="number" id="monthly-income" placeholder="e.g. 5000" value="5000">
+                        </div>
+                        <div class="input-group">
+                            <label for="first-buyer">First-time Homebuyer?</label>
+                            <select id="first-buyer">
+                                <option value="yes" selected>Yes, it's my first home</option>
+                                <option value="no">No, I already own property</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="estimator-result">
+                        <span class="subsidy-badge" id="subsidy-badge">Eligible</span>
+                        <div class="result-label">Estimated AI-Discovered Aid:</div>
+                        <div class="result-amount" id="subsidy-result-amount">100,000 MAD</div>
+                        <div class="result-explanation" id="subsidy-result-expl">
+                            As the property price is <strong>≤ 300,000 MAD</strong>, you are eligible for the maximum
+                            direct aid of 100,000 MAD.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Notes Panel -->
             <div class="section-notes-wrapper fade-up">
                 <div class="notes-toggle" id="notes-toggle-ai-engines" onclick="toggleNotesPanel('ai-engines')">
@@ -2453,6 +2491,14 @@
             <button class="genie-close" id="genie-close">&times;</button>
             <div class="genie-msg" id="genie-msg">👋 Hi! I'm <strong>Genie</strong>, your AI advisor. Scroll down — I'll
                 guide you!</div>
+            <div class="genie-input-area" id="genie-input-area"
+                style="display: none; margin-top: 12px; border-top: 1px solid rgba(139, 92, 246, 0.2); padding-top: 10px;">
+                <input type="text" id="genie-user-input" placeholder="Ask me something..."
+                    style="width: 100%; background: rgba(255,255,255,0.05); border: 1px solid rgba(139,92,246,0.3); border-radius: 8px; padding: 8px 10px; color: #fff; font-size: 0.8rem; margin-bottom: 6px;">
+                <button onclick="GenieBot.ask()"
+                    style="width: 100%; background: var(--gradient); border: none; border-radius: 8px; padding: 6px; color: #fff; font-size: 0.8rem; font-weight: 600; cursor: pointer;">Ask
+                    Genie</button>
+            </div>
         </div>
         <div class="genie-avatar" id="genie-avatar">
             <div class="genie-robot">🤖</div>
@@ -2709,6 +2755,39 @@
             window.addEventListener('scroll', updateGenieMessage);
             // Initial message
             setTimeout(() => { updateGenieMessage(); }, 500);
+
+            // Global access for the onclick handler
+            window.GenieBot = {
+                ask() {
+                    const input = document.getElementById('genie-user-input');
+                    const msgEl = document.getElementById('genie-msg');
+                    const text = input.value.trim().toLowerCase();
+                    if (!text) return;
+
+                    input.value = '';
+                    msgEl.innerHTML = "Thinking...";
+
+                    setTimeout(() => {
+                        if (text.includes('subsidy') || text.includes('daam') || text.includes('aid')) {
+                            msgEl.innerHTML = "I can help with that! Check out **Engine 02** above. I found that 94,000 families were helped in 2024 alone!";
+                        } else if (text.includes('roadmap') || text.includes('next')) {
+                            msgEl.innerHTML = "We start with Renters & Owners in Phase 1 (Months 1-3). Check the 🚀 **Roadmap** section for the full 6-month vision!";
+                        } else if (text.includes('tech') || text.includes('build') || text.includes('stack')) {
+                            msgEl.innerHTML = "STAYGENIE is built with **Next.js, Python (FastAPI), and GPT-4**. High-performance and AI-first!";
+                        } else {
+                            msgEl.innerHTML = "Great question! As an AI advisor, I'm constantly learning. For now, try asking me about **subsidies, the roadmap, or my tech stack**!";
+                        }
+                    }, 800);
+                }
+            };
+
+            // Show input area after a short delay
+            setTimeout(() => {
+                const inputArea = document.getElementById('genie-input-area');
+                if (inputArea) inputArea.style.display = 'block';
+                const bubble = document.getElementById('genie-bubble');
+                if (bubble) bubble.style.maxWidth = '300px';
+            }, 3000);
         })();
 
         // User Journey Persona Tabs
@@ -2724,6 +2803,7 @@
     </script>
 
     <script src="script.js"></script>
+    <script src="calculator.js"></script>
     <script src="notes.js"></script>
 </body>
 
