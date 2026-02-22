@@ -7,7 +7,7 @@ This document analyzes the best-in-class technology stack for STAYGENIE and comp
 | Competitor | Core Stack | Premium Services | AI Approach |
 |---|---|---|---|
 | **Avito.ma** | Flask, Tornado, MongoDB | Branded Boutiques, Premium Ads, Broad Marketplace | Basic ML for ads/recs |
-| **Mubawab.ma** | Traditional PHP/Web | Mubawab Transaction (New builds), Lead Gen Tools | Smart pricing & recommendations |
+| **Mubawab.ma** | Traditional PHP/Web | **Ad Packs (Premium/Super Premium)**, Mubawabi Back-office, Transaction Unit | Smart pricing & recommendations |
 | **Sarouty.ma** | PropTech focus | SAROUTY Real Estate (Valuation & Management) | AI virtual assistants (Market data) |
 | **STAYGENIE** | **Next.js + FastAPI** | **Subsidy-as-a-Service, Contract Intelligence** | **Conversational Reasoning (GPT-4)** |
 
