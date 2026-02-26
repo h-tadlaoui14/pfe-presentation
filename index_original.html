@@ -2952,6 +2952,116 @@
     <script src="script.js"></script>
     <script src="calculator.js"></script>
     <script src="notes.js"></script>
+    <!-- Floating Genie Mascot -->
+    <div class="genie-wrapper" id="genieWrapper">
+        <!-- Magical smoke wisps behind genie -->
+        <div class="genie-smoke">
+            <div class="smoke-wisp wisp-1"></div>
+            <div class="smoke-wisp wisp-2"></div>
+            <div class="smoke-wisp wisp-3"></div>
+        </div>
+        <!-- Sparkle particles -->
+        <div class="genie-sparkles">
+            <div class="sparkle s1">✦</div>
+            <div class="sparkle s2">✧</div>
+            <div class="sparkle s3">✦</div>
+            <div class="sparkle s4">✧</div>
+            <div class="sparkle s5">✦</div>
+        </div>
+        <!-- Genie SVG illustration -->
+        <div class="genie-body">
+            <svg class="genie-svg" viewBox="0 0 120 200" xmlns="http://www.w3.org/2000/svg">
+                <!-- Smoke tail -->
+                <defs>
+                    <radialGradient id="smokeGrad" cx="50%" cy="100%" r="60%">
+                        <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.8" />
+                        <stop offset="60%" stop-color="#06b6d4" stop-opacity="0.4" />
+                        <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0" />
+                    </radialGradient>
+                    <radialGradient id="bodyGrad" cx="40%" cy="30%" r="70%">
+                        <stop offset="0%" stop-color="#4aaeff" />
+                        <stop offset="100%" stop-color="#1a4a7a" />
+                    </radialGradient>
+                    <filter id="glow">
+                        <feGaussianBlur stdDeviation="2" result="blur" />
+                        <feMerge>
+                            <feMergeNode in="blur" />
+                            <feMergeNode in="SourceGraphic" />
+                        </feMerge>
+                    </filter>
+                </defs>
+                <!-- Smoke / tail -->
+                <ellipse cx="60" cy="180" rx="32" ry="14" fill="url(#smokeGrad)" opacity="0.6" />
+                <path d="M 40 160 Q 30 140 35 120 Q 40 100 38 80" stroke="#8b5cf6" stroke-width="18"
+                    stroke-linecap="round" fill="none" opacity="0.35" />
+                <path d="M 80 160 Q 90 140 85 120 Q 80 100 82 80" stroke="#06b6d4" stroke-width="18"
+                    stroke-linecap="round" fill="none" opacity="0.35" />
+                <path d="M 60 170 Q 55 150 58 125 Q 61 100 60 75" stroke="#a78bfa" stroke-width="22"
+                    stroke-linecap="round" fill="none" opacity="0.5" />
+                <!-- Body / torso -->
+                <ellipse cx="60" cy="110" rx="28" ry="38" fill="url(#bodyGrad)" filter="url(#glow)" />
+                <!-- Belt/sash -->
+                <rect x="34" y="118" width="52" height="10" rx="5" fill="#f59e0b" opacity="0.9" />
+                <circle cx="60" cy="123" r="5" fill="#fbbf24" />
+                <!-- Arms -->
+                <path d="M 34 105 Q 15 100 18 118 Q 21 130 32 128" stroke="#4aaeff" stroke-width="10"
+                    stroke-linecap="round" fill="none" />
+                <path d="M 86 105 Q 105 100 102 118 Q 99 130 88 128" stroke="#4aaeff" stroke-width="10"
+                    stroke-linecap="round" fill="none" />
+                <!-- Hands / fists (crossed) -->
+                <circle cx="21" cy="124" r="8" fill="#4aaeff" />
+                <circle cx="99" cy="124" r="8" fill="#4aaeff" />
+                <!-- Neck -->
+                <rect x="51" y="73" width="18" height="12" rx="6" fill="#4aaeff" />
+                <!-- Head -->
+                <ellipse cx="60" cy="60" rx="26" ry="28" fill="url(#bodyGrad)" filter="url(#glow)" />
+                <!-- Eyes -->
+                <ellipse cx="50" cy="57" rx="5" ry="6" fill="#fff" />
+                <ellipse cx="70" cy="57" rx="5" ry="6" fill="#fff" />
+                <circle cx="51" cy="58" r="3.5" fill="#1a1a3e" />
+                <circle cx="71" cy="58" r="3.5" fill="#1a1a3e" />
+                <circle cx="52" cy="57" r="1.2" fill="#fff" />
+                <circle cx="72" cy="57" r="1.2" fill="#fff" />
+                <!-- Smile -->
+                <path d="M 50 70 Q 60 78 70 70" stroke="#fff" stroke-width="2.5" stroke-linecap="round" fill="none" />
+                <!-- Turban -->
+                <path d="M 36 48 Q 40 22 60 20 Q 80 22 84 48 Q 75 38 60 36 Q 45 38 36 48 Z" fill="#7c3aed" />
+                <path d="M 36 48 Q 40 35 60 33 Q 80 35 84 48" fill="#6d28d9" stroke="#8b5cf6" stroke-width="1" />
+                <!-- Turban jewel -->
+                <ellipse cx="60" cy="36" rx="7" ry="5" fill="#f59e0b" />
+                <circle cx="60" cy="36" r="3" fill="#fcd34d" />
+                <!-- Turban feather -->
+                <path d="M 60 31 Q 55 15 63 5 Q 67 18 60 31" fill="#8b5cf6" opacity="0.9" />
+            </svg>
+        </div>
+        <!-- Magic lamp at the bottom -->
+        <div class="genie-lamp">
+            <svg viewBox="0 0 80 40" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <radialGradient id="lampGrad" cx="40%" cy="30%">
+                        <stop offset="0%" stop-color="#fcd34d" />
+                        <stop offset="100%" stop-color="#b45309" />
+                    </radialGradient>
+                </defs>
+                <!-- Lamp glow -->
+                <ellipse cx="40" cy="38" rx="30" ry="5" fill="#f59e0b" opacity="0.2" />
+                <!-- Lamp body -->
+                <path d="M 10 25 Q 8 15 20 12 L 55 12 Q 68 12 70 22 Q 72 30 60 33 L 20 33 Z" fill="url(#lampGrad)" />
+                <!-- Spout -->
+                <path d="M 60 20 Q 75 15 78 20 Q 75 26 60 28" fill="#d97706" />
+                <!-- Handle -->
+                <path d="M 12 22 Q 2 22 2 30 Q 2 38 12 33" stroke="#b45309" stroke-width="4" fill="none"
+                    stroke-linecap="round" />
+                <!-- Shine -->
+                <ellipse cx="35" cy="18" rx="10" ry="4" fill="#fef3c7" opacity="0.4" />
+            </svg>
+        </div>
+        <!-- Tooltip speech bubble -->
+        <div class="genie-tip" id="genieTip">
+            <span>✦ Your AI Real Estate Genie</span>
+        </div>
+    </div>
+
 </body>
 
 </html>

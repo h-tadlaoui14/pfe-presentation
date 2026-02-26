@@ -3589,3 +3589,263 @@ strong {
     color: var(--text-dim);
     line-height: 1.6;
 }
+
+/* ================================
+   FLOATING GENIE MASCOT
+   ================================ */
+@keyframes genieFloat {
+
+    0%,
+    100% {
+        transform: translateY(0px) rotate(-1deg);
+    }
+
+    50% {
+        transform: translateY(-18px) rotate(1deg);
+    }
+}
+
+@keyframes genieReveal {
+    from {
+        opacity: 0;
+        transform: translateX(60px) scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+@keyframes smokeRise {
+    0% {
+        opacity: 0;
+        transform: translateY(0) scaleX(1);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: translateY(-20px) scaleX(1.2);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-40px) scaleX(0.6);
+    }
+}
+
+@keyframes sparkleFloat {
+    0% {
+        opacity: 0;
+        transform: translateY(0) scale(0);
+    }
+
+    20% {
+        opacity: 1;
+        transform: translateY(-10px) scale(1.2);
+    }
+
+    80% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-50px) scale(0.3);
+    }
+}
+
+@keyframes lampGlow {
+
+    0%,
+    100% {
+        filter: drop-shadow(0 0 6px rgba(245, 158, 11, 0.4));
+    }
+
+    50% {
+        filter: drop-shadow(0 0 18px rgba(245, 158, 11, 0.9));
+    }
+}
+
+@keyframes tipBounce {
+    0% {
+        opacity: 0;
+        transform: translateX(8px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.genie-wrapper {
+    position: fixed;
+    right: 0;
+    bottom: 80px;
+    z-index: 900;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0;
+    animation: genieReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1.5s both;
+    cursor: pointer;
+}
+
+.genie-body {
+    position: relative;
+    animation: genieFloat 5s ease-in-out infinite;
+    transform-origin: center bottom;
+    filter: drop-shadow(0 8px 32px rgba(139, 92, 246, 0.4));
+    transition: filter 0.3s;
+    margin-right: 8px;
+}
+
+.genie-wrapper:hover .genie-body {
+    filter: drop-shadow(0 12px 48px rgba(139, 92, 246, 0.7));
+    animation-play-state: paused;
+}
+
+.genie-svg {
+    width: 90px;
+    height: 150px;
+}
+
+/* Smoke aura behind genie */
+.genie-smoke {
+    position: absolute;
+    bottom: 60px;
+    right: 8px;
+    width: 90px;
+    height: 80px;
+    pointer-events: none;
+}
+
+.smoke-wisp {
+    position: absolute;
+    bottom: 0;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.5) 0%, rgba(6, 182, 212, 0.2) 60%, transparent 100%);
+    animation: smokeRise 3s ease-in-out infinite;
+}
+
+.wisp-1 {
+    width: 30px;
+    height: 30px;
+    left: 20px;
+    animation-delay: 0s;
+}
+
+.wisp-2 {
+    width: 22px;
+    height: 22px;
+    left: 45px;
+    animation-delay: 1s;
+}
+
+.wisp-3 {
+    width: 18px;
+    height: 18px;
+    left: 10px;
+    animation-delay: 1.8s;
+}
+
+/* Sparkle particles */
+.genie-sparkles {
+    position: absolute;
+    top: -10px;
+    right: 0;
+    width: 110px;
+    height: 180px;
+    pointer-events: none;
+}
+
+.sparkle {
+    position: absolute;
+    font-size: 0.75rem;
+    color: #a78bfa;
+    animation: sparkleFloat 4s ease-in-out infinite;
+    opacity: 0;
+}
+
+.s1 {
+    left: 5px;
+    top: 80px;
+    animation-delay: 0s;
+    color: #8b5cf6;
+}
+
+.s2 {
+    left: 80px;
+    top: 60px;
+    animation-delay: 0.8s;
+    color: #06b6d4;
+}
+
+.s3 {
+    left: 50px;
+    top: 20px;
+    animation-delay: 1.6s;
+    color: #f59e0b;
+}
+
+.s4 {
+    left: 15px;
+    top: 30px;
+    animation-delay: 2.4s;
+    color: #a78bfa;
+}
+
+.s5 {
+    left: 70px;
+    top: 100px;
+    animation-delay: 3.2s;
+    color: #06b6d4;
+}
+
+/* Lamp */
+.genie-lamp {
+    animation: lampGlow 2.5s ease-in-out infinite;
+    margin-right: 12px;
+    margin-top: -10px;
+}
+
+.genie-lamp svg {
+    width: 72px;
+}
+
+/* Tooltip / speech bubble */
+.genie-tip {
+    position: absolute;
+    right: 110px;
+    bottom: 100px;
+    background: rgba(12, 12, 20, 0.92);
+    border: 1px solid rgba(139, 92, 246, 0.4);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border-radius: 12px 12px 0 12px;
+    padding: 10px 14px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #e4e4e7;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0 4px 24px rgba(139, 92, 246, 0.25);
+    transition: opacity 0.3s;
+}
+
+.genie-tip::after {
+    content: '';
+    position: absolute;
+    right: -8px;
+    bottom: 0;
+    border: 6px solid transparent;
+    border-left-color: rgba(139, 92, 246, 0.4);
+    border-bottom-color: rgba(139, 92, 246, 0.4);
+}
+
+.genie-wrapper:hover .genie-tip {
+    opacity: 1;
+    animation: tipBounce 0.3s ease-out both;
+}
