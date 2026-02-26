@@ -3826,20 +3826,50 @@ strong {
     position: absolute;
     right: 110px;
     bottom: 100px;
-    background: rgba(12, 12, 20, 0.92);
+    background: rgba(12, 12, 20, 0.94);
     border: 1px solid rgba(139, 92, 246, 0.4);
     -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
     border-radius: 12px 12px 0 12px;
-    padding: 10px 14px;
+    padding: 12px 32px 12px 14px;
     font-size: 0.78rem;
-    font-weight: 600;
+    font-weight: 500;
     color: #e4e4e7;
-    white-space: nowrap;
+    white-space: normal;
+    max-width: 240px;
     opacity: 0;
     pointer-events: none;
     box-shadow: 0 4px 24px rgba(139, 92, 246, 0.25);
-    transition: opacity 0.3s;
+    transition: opacity 0.35s ease, transform 0.35s ease;
+    transform: translateX(8px);
+    line-height: 1.5;
+}
+
+.genie-tip.visible {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateX(0);
+}
+
+.genie-tip-close {
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    background: none;
+    border: none;
+    color: #94a3b8;
+    font-size: 15px;
+    cursor: pointer;
+    line-height: 1;
+    padding: 2px 4px;
+}
+
+.genie-tip-close:hover {
+    color: #fff;
+}
+
+.genie-tip-msg strong {
+    color: #a78bfa;
 }
 
 .genie-tip::after {
@@ -3854,5 +3884,6 @@ strong {
 
 .genie-wrapper:hover .genie-tip {
     opacity: 1;
-    animation: tipBounce 0.3s ease-out both;
+    pointer-events: all;
+    transform: translateX(0);
 }
