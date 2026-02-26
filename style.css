@@ -1869,6 +1869,13 @@ strong {
     margin-bottom: 12px;
 }
 
+.revenue-eur {
+    font-weight: 400;
+    font-size: 0.72rem;
+    color: var(--text-dim);
+    opacity: 0.8;
+}
+
 .revenue-desc {
     font-size: 0.8rem;
     color: var(--text-muted);
