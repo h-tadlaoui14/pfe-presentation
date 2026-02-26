@@ -187,4 +187,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // ========================
+    // Genie Mascot Interaction
+    // ========================
+    const genieWrapper = document.getElementById('genieWrapper');
+    if (genieWrapper) {
+        // Click: scroll smoothly back to top (hero section)
+        genieWrapper.addEventListener('click', () => {
+            document.getElementById('hero').scrollIntoView({ behavior: 'smooth' });
+            genieWrapper.style.transition = 'transform 0.15s ease';
+            genieWrapper.style.transform = 'scale(1.15)';
+            setTimeout(() => { genieWrapper.style.transform = ''; }, 300);
+        });
+
+        // Auto-show tooltip briefly after load (2.5s after page load)
+        const genieTip = document.getElementById('genieTip');
+        if (genieTip) {
+            setTimeout(() => {
+                genieTip.style.opacity = '1';
+                setTimeout(() => { genieTip.style.opacity = ''; }, 3000);
+            }, 2500);
+        }
+    }
+
 });
