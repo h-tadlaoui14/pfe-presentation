@@ -3718,13 +3718,6 @@ strong {
     height: 150px;
 }
 
-.genie-img {
-    width: 110px;
-    height: auto;
-    display: block;
-    object-fit: contain;
-}
-
 /* Smoke aura behind genie */
 .genie-smoke {
     position: absolute;
