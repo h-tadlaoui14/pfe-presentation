@@ -166,24 +166,41 @@ document.addEventListener('DOMContentLoaded', () => {
     // ========================
     const nav = document.getElementById('nav');
     // ========================
-    // Currency Toggle
+    // Currency Toggle — Global
     // ========================
     const currencyToggle = document.getElementById('currencyToggle');
+    let currentCurrency = 'MAD';
+
+    function applyGlobalCurrency(currency) {
+        currentCurrency = currency;
+
+        // 1. Swap all tagged .cv spans (data-mad / data-eur)
+        document.querySelectorAll('.cv').forEach(el => {
+            el.textContent = currency === 'EUR' ? el.dataset.eur : el.dataset.mad;
+        });
+
+        // 2. Toggle inline EUR hints in revenue section
+        document.querySelectorAll('.revenue-eur').forEach(el => {
+            el.style.display = currency === 'EUR' ? 'none' : '';
+        });
+
+        // 3. Dispatch for calculator.js
+        document.dispatchEvent(new CustomEvent('currencyChange', {
+            detail: { currency }
+        }));
+    }
+
     if (currencyToggle) {
         currencyToggle.addEventListener('click', () => {
             const isEur = currencyToggle.classList.toggle('eur');
             const newCurrency = isEur ? 'EUR' : 'MAD';
 
-            // Update labels
+            // Update toggle labels
             currencyToggle.querySelectorAll('.currency-label').forEach(label => {
                 label.classList.toggle('active', label.dataset.curr === newCurrency);
             });
 
-            // Dispatch global event for other components (like calculator)
-            const event = new CustomEvent('currencyChange', {
-                detail: { currency: newCurrency }
-            });
-            document.dispatchEvent(event);
+            applyGlobalCurrency(newCurrency);
         });
     }
 
