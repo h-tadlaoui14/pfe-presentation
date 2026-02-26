@@ -165,12 +165,26 @@ document.addEventListener('DOMContentLoaded', () => {
     // Nav background on scroll
     // ========================
     const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            nav.style.background = 'rgba(10, 10, 15, 0.95)';
-        } else {
-            nav.style.background = 'rgba(10, 10, 15, 0.8)';
-        }
-    });
+    // ========================
+    // Currency Toggle
+    // ========================
+    const currencyToggle = document.getElementById('currencyToggle');
+    if (currencyToggle) {
+        currencyToggle.addEventListener('click', () => {
+            const isEur = currencyToggle.classList.toggle('eur');
+            const newCurrency = isEur ? 'EUR' : 'MAD';
+
+            // Update labels
+            currencyToggle.querySelectorAll('.currency-label').forEach(label => {
+                label.classList.toggle('active', label.dataset.curr === newCurrency);
+            });
+
+            // Dispatch global event for other components (like calculator)
+            const event = new CustomEvent('currencyChange', {
+                detail: { currency: newCurrency }
+            });
+            document.dispatchEvent(event);
+        });
+    }
 
 });

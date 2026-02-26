@@ -32,15 +32,20 @@
             <a href="#positioning" class="nav-link" data-section="positioning">Positioning</a>
             <a href="#why-now" class="nav-link" data-section="why-now">Why Now</a>
             <a href="#competitors" class="nav-link" data-section="competitors">Competitors</a>
+            <a href="#partnerships" class="nav-link" data-section="partnerships">Partners</a>
             <a href="#personas" class="nav-link" data-section="personas">Personas</a>
             <a href="#ai-engines" class="nav-link" data-section="ai-engines">AI Engines</a>
-            <a href="#architecture" class="nav-link" data-section="architecture">Architecture</a>
-            <a href="#impact" class="nav-link" data-section="impact">Impact</a>
-            <a href="#roadmap" class="nav-link" data-section="roadmap">Roadmap</a>
             <a href="#revenue" class="nav-link" data-section="revenue">Revenue</a>
             <a href="#gtm" class="nav-link" data-section="gtm">GTM</a>
-            <a href="#user-flow" class="nav-link" data-section="user-flow">User Flow</a>
-            <a href="#swot" class="nav-link" data-section="swot">SWOT</a>
+        </div>
+        <div class="nav-actions">
+            <div class="currency-toggle" id="currencyToggle">
+                <span class="currency-label active" data-curr="MAD">MAD</span>
+                <div class="toggle-switch">
+                    <div class="toggle-knob"></div>
+                </div>
+                <span class="currency-label" data-curr="EUR">EUR</span>
+            </div>
         </div>
         <div class="nav-progress">
             <div class="nav-progress-bar" id="progressBar"></div>
@@ -434,8 +439,8 @@
                             <span class="comp-type">General Classifieds</span>
                         </div>
                     </div>
-                    <p class="comp-desc">Morocco's largest classifieds platform. Massive reach and user base, but zero
-                        guidance beyond posting a listing.</p>
+                    <p class="comp-desc">Morocco's largest classifieds platform. <strong>Business Model:</strong>
+                        Freemium + Visibility Ads (Top of Page, Boutique Subscriptions). No transaction control.</p>
                     <div class="comp-strengths">
                         <h5 class="comp-section-label comp-label-good">✅ What They Do Well</h5>
                         <div class="gap-item"><span class="gap-check">✓</span> Largest user base in Morocco — enormous
@@ -469,8 +474,8 @@
                             <span class="comp-type">Real Estate Portal</span>
                         </div>
                     </div>
-                    <p class="comp-desc">Morocco's largest dedicated real estate portal. Better organized but still a
-                        passive database with no guidance.</p>
+                    <p class="comp-desc">Real Estate Portal. <strong>Business Model:</strong> Paid Listing Packs (e.g.
+                        4,320 MAD/year for 20 ads) + Developer Lead Gen. No rental commission.</p>
                     <div class="comp-strengths">
                         <h5 class="comp-section-label comp-label-good">✅ What They Do Well</h5>
                         <div class="gap-item"><span class="gap-check">✓</span> Real estate focused — structured
@@ -502,8 +507,8 @@
                             <span class="comp-type">Hotel & Short-term Booking</span>
                         </div>
                     </div>
-                    <p class="comp-desc">Global travel booking giant. Excellent booking UX and payment infrastructure
-                        but completely absent from rentals and investment.</p>
+                    <p class="comp-desc">Travel Booking Giant. <strong>Business Model:</strong> 10%–25% Commission per
+                        confirmed stay. Paid "Preferred Partner" visibility boosts.</p>
                     <div class="comp-strengths">
                         <h5 class="comp-section-label comp-label-good">✅ What They Do Well</h5>
                         <div class="gap-item"><span class="gap-check">✓</span> World-class booking & payment UX</div>
@@ -534,8 +539,8 @@
                             <span class="comp-type">Short-term Vacation Rentals</span>
                         </div>
                     </div>
-                    <p class="comp-desc">Global short-term rental marketplace. Excellent community trust model but only
-                        covers vacation stays — facing regulatory crackdowns in Morocco.</p>
+                    <p class="comp-desc">Short-term Marketplace. <strong>Business Model:</strong> 15%–15.5% Host-only
+                        Fee (simplified pricing) or Split Fee (3% host / 14-16% guest).</p>
                     <div class="comp-strengths">
                         <h5 class="comp-section-label comp-label-good">✅ What They Do Well</h5>
                         <div class="gap-item"><span class="gap-check">✓</span> Review system creates strong trust</div>
@@ -725,6 +730,53 @@
                         <button class="note-add-btn" onclick="NotesManager.add('competitors')">Add Note</button>
                     </div>
                     <div class="notes-list" id="notes-list-competitors"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STRATEGIC PARTNERSHIPS SECTION -->
+    <section id="partnerships" class="section">
+        <div class="container">
+            <div class="section-header fade-up">
+                <span class="section-tag">Ecosystem</span>
+                <h2 class="section-title">Strategic <span class="gradient-text">Partnerships</span></h2>
+                <p class="section-desc">How we reach and incentivize our biggest partners in Morocco.</p>
+            </div>
+
+            <div class="partners-grid fade-up delay-1">
+                <div class="partner-card">
+                    <div class="partner-header">
+                        <div class="partner-logo">🔵</div>
+                        <h4>Mubawab Morocco</h4>
+                    </div>
+                    <div class="partner-body">
+                        <h5>How to Reach Them:</h5>
+                        <p>Focus on their "Mubawab Transaction" unit. They seek high-quality leads for new developments.
+                            We pitch STAYGENIE as an <strong>exclusive qualification engine</strong>.</p>
+                        <h5>Commissioning Logic:</h5>
+                        <ul class="partner-list">
+                            <li><strong>Subscription Model:</strong> We pay them for access to their API/listing
+                                database (Agency Pack logic).</li>
+                            <li><strong>Inbound Revenue:</strong> We charge a referral fee to agencies for
+                                "Genie-Verified" leads sourced via Mubawab listings.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="partner-card">
+                    <div class="partner-header">
+                        <div class="partner-logo">🏦</div>
+                        <h4>Moroccan Banks (CIH/BMCE)</h4>
+                    </div>
+                    <div class="partner-body">
+                        <h5>Outreach Strategy:</h5>
+                        <p>Pitch as a digital acquisition channel for <strong>Daam Sakane</strong> mortgage
+                            applications. Banks are struggling to digitize the subsidy application flow.</p>
+                        <h5>Revenue Share:</h5>
+                        <p>Fixed fee per qualified mortgage application (Referral Fee) + Data insights on real estate
+                            trends.</p>
+                    </div>
                 </div>
             </div>
         </div>
